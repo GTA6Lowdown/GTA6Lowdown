@@ -388,12 +388,7 @@ footer .soc a{color:var(--orange-b);text-decoration:none;font-family:var(--displ
 .railpanel .fun p{font-size:14px;margin:6px 0 10px}
 .railpanel .btn{font-size:16px;padding:9px 16px}
 .railclose{float:right;background:none;border:0;font-family:var(--display);font-size:16px;color:var(--brown);cursor:pointer;padding:4px 6px}
-@media (min-width:1500px){
-  body{padding-right:300px}
-  .funrail{top:72px}
-  .funrail .railtab,.funrail .railclose{display:none}
-  .funrail .railpanel{display:block}
-}
+.funrail.open .railtab{background:var(--brown);color:var(--orange-b)}
 @media (max-width:600px){.railpanel{width:min(300px,86vw)}.railtab{font-size:15px;padding:12px 8px}}
 
 /* G's Cache (v03) */
@@ -401,12 +396,10 @@ footer .soc a{color:var(--orange-b);text-decoration:none;font-family:var(--displ
 .gc-card .gcsmall{font-size:13px;color:var(--muted)}
 .gc-card .gchint{font-family:var(--hand);font-size:22px;line-height:1.15;background:var(--sticky);border-radius:10px;padding:8px 10px;margin:8px 0}
 .gc-card ul{margin:6px 0 0;padding-left:18px;font-size:13px}
-.gcache{display:inline-flex;vertical-align:middle;width:30px;height:30px;margin-left:8px;padding:0;border:0;background:none;cursor:pointer;opacity:.9;transition:transform .2s}
+.gcache{display:inline-flex;vertical-align:middle;width:30px;height:30px;margin-left:8px;padding:0;border:0;background:none;cursor:pointer;opacity:0;transition:opacity .25s,transform .25s}
 .gcache svg{width:100%;height:100%;filter:drop-shadow(1px 2px 0 rgba(0,0,0,.3))}
-.gcache:hover,.gcache:focus-visible{transform:scale(1.25) rotate(-8deg);opacity:1}
-@media (prefers-reduced-motion:no-preference){.gcache{animation:gcwob 6s ease-in-out infinite}}
-@keyframes gcwob{0%,92%,100%{transform:none}94%{transform:rotate(-10deg)}96%{transform:rotate(8deg)}98%{transform:rotate(-4deg)}}
+.gcache:hover,.gcache:focus-visible{opacity:1;transform:scale(1.25) rotate(-8deg)}
 .gcfound{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:90;width:min(360px,90vw);text-align:center;padding:26px 22px;border-radius:22px;background:var(--glass),var(--paper);border:var(--glass-edge);box-shadow:0 30px 60px rgba(20,10,4,.35);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}
 .gcfound h3{font-size:34px;color:var(--teal)}
-.gcfound .amt{font-family:var(--display);font-size:46px;color:var(--brown)}
+.gcfound .amt{font-family:var(--hand);font-size:26px;line-height:1.2;color:var(--brown);background:var(--sticky);border-radius:12px;padding:12px 14px;margin:12px 0}
 .gcfound[hidden],#gcWarmer[hidden]{display:none}

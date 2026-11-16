@@ -127,7 +127,24 @@
   // G's Cache: one hidden stash a day, somewhere on the site
   var GC_PAGES={home:'Home',news:'News',tips:'Tips',guides:'Guides',leonida:'Leonida','games':'Games',cheats:'Cheats','old-games':'Old games',videos:'Videos'};
   var GC_URL={home:'index.html',news:'news.html',tips:'tips.html',guides:'guides.html',leonida:'leonida.html',games:'games.html',cheats:'cheats.html','old-games':'old-games.html',videos:'videos.html'};
-  var ITEMS=['Ocean Beach postcard','Little Cuba coffee cup','Grassrivers airboat keyring','Port Gellhorn pier ticket','Mount Kalaga trail map','Ambrosia sugar sack','Leonida Keys fishing lure','Vice City snow globe','Flash FM mixtape','Cocoteo FM sticker','Back Country Radio cap','Neon palm tree magnet','Vintage Vice City shirt patch','Wanted poster (blank)','Lowdown notebook page'];
+  var FACTS=[
+    'GTA 6 was first revealed with Trailer 1 on 4 December 2023, set to Tom Petty\'s "Love Is a Long Road".',
+    'Trailer 2 arrived on 6 May 2025, with The Pointer Sisters\' "Hot Together".',
+    'The Launch Trailer song is "Flower in a Hurricane" by Justice, with Tame Impala, SZA and King Gizzard & The Lizard Wizard.',
+    'GTA 6\'s "An Extended Look", about 26 minutes long, premiered on Netflix before it reached YouTube.',
+    'Rockstar has named six regions of Leonida: Vice City, the Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia and Mount Kalaga.',
+    'Rockstar North\'s Aaron Garbut told Game Informer the map is about twice the size of GTA V\'s.',
+    'Flash FM is back in GTA 6. The station first appeared in GTA: Vice City in 2002.',
+    'GTA 6 is the first game in the series with on-demand podcasts, and you can listen on foot through headphones.',
+    'Grand Theft Auto VI: The Album has 34 original tracks, released with Atlantic Records.',
+    'Justice wrote GTA 6\'s score. The score album comes out on 11 December 2026.',
+    'The Chamber 106.6 is GTA 6\'s metal station. Press reports say its hosts are Slayer\'s Kerry King and Tom Araya.',
+    'The Vintage Vice City Pack\'s weapon pattern is based on Tommy Vercetti\'s famous shirt.',
+    'Physical copies of GTA 6 are a download code in a box. There\'s no disc.',
+    'On 18 November 2026, the night before launch, the Miami Heat take on the Milwaukee Bucks as "Vice City".',
+    'Rockstar and PlayStation are throwing a GTA 6 festival at Mana Wynwood in Miami on 21 November 2026.',
+    'Rockstar says GTA 6 targets 30 frames per second, and the PS5 Pro adds ray-traced shadows.'
+  ];
   function hash(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
   var d=new Date(),today=d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
   var y=new Date(d.getFullYear(),d.getMonth(),d.getDate()-1),yesterday=y.getFullYear()+'-'+pad(y.getMonth()+1)+'-'+pad(y.getDate());
@@ -138,10 +155,9 @@
     var st=$('#gcStatus');if(!st)return;
     var found=gc.last===today;
     st.textContent=found?'Found today':'Out there somewhere';
-    $('#gcTotal').textContent=money(gc.total);
+    $('#gcTotal').textContent=gc.items.length+' of '+FACTS.length;
     $('#gcMeta').textContent=gc.finds+(gc.finds===1?' cache':' caches')+' found, '+gc.streak+'-day streak';
-    $('#gcHint').innerHTML=found?'Collected. A new cache drops tomorrow.':'Today\'s cache is hidden on the <a href="'+GC_URL[gcPage]+'">'+GC_PAGES[gcPage]+'</a> page.'+(gcWarm?'<br>Look near "'+gcWarm+'".':'');
-    $('#gcWarmer').hidden=found||!!gcWarm||page!==gcPage;
+    $('#gcHint').textContent=found?'Collected. A new cache drops tomorrow.':'It\'s hidden somewhere on this site today, and it\'s invisible until your cursor finds it.';
     var ul=$('#gcItems');ul.innerHTML='';gc.items.slice(-5).reverse().forEach(function(it){var li=document.createElement('li');li.textContent=it;ul.appendChild(li)});
   }
   var gcWarm='',gcSpot=null,gcWarmText='';
@@ -156,19 +172,18 @@
       b.addEventListener('click',function(e){
         e.preventDefault();e.stopPropagation();
         if(gc.last===today)return;
-        var amt=2500+(hash('amt'+today)%26)*500;
         gc.streak=(gc.last===yesterday)?gc.streak+1:1;
-        var bonus=Math.min(gc.streak-1,5)*1000;amt+=bonus;
-        var item=ITEMS[hash('item'+today)%ITEMS.length];
-        gc.total+=amt;gc.finds+=1;gc.last=today;gc.items.push(item);
+        if(!Array.isArray(gc.items)||gc.items.some(function(x){return FACTS.indexOf(x)<0}))gc.items=[];
+        var left=FACTS.filter(function(f){return gc.items.indexOf(f)<0});if(!left.length){gc.items=[];left=FACTS.slice()}
+        var fact=left[hash('fact'+today)%left.length];
+        gc.finds+=1;gc.last=today;gc.items.push(fact);
         store('lowdown-gcache',JSON.stringify(gc));b.remove();
-        var m=$('#gcFound');m.querySelector('.amt').textContent=money(amt);
-        m.querySelector('.gcitem').textContent='Plus: '+item+(bonus?' (streak bonus '+money(bonus)+')':'');
+        var m=$('#gcFound');m.querySelector('.amt').textContent=fact;
+        m.querySelector('.gcitem').textContent='Fact '+gc.items.length+' of '+FACTS.length+' collected'+(gc.streak>1?'. '+gc.streak+'-day streak!':'.');
         m.hidden=false;m.querySelector('button').focus();gcRender();
       });
     }
   }
-  if($('#gcWarmer'))$('#gcWarmer').addEventListener('click',function(){gcWarm=gcWarmText||'the middle of the page';gcRender()});
   if($('#gcFound'))$('#gcFound').querySelector('button').addEventListener('click',function(){$('#gcFound').hidden=true});
   gcRender();
 })();
