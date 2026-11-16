@@ -8,426 +8,53 @@
 <link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <meta name="theme-color" content="#3e2113">
-<title>GTA 6 Lowdown: GTA 6 news, facts and videos</title>
-<meta name="description" content="GTA 6 Lowdown: what Rockstar has actually confirmed about GTA 6, what's still rumor, every video from the channel, quizzes and the older GTA games explained. Unofficial fan site.">
+<title>GTA 6 Lowdown: GTA 6 news, tips, guides and games</title>
+<meta name="description" content="GTA 6 Lowdown: the latest GTA 6 news, gameplay tips, in-depth guides, quizzes and the older games explained. Unofficial fan site.">
+<link rel="canonical" href="https://gta6lowdown.github.io/GTA6Lowdown/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;700&family=Caveat:wght@600&family=Permanent+Marker&display=swap">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"GTA 6 Lowdown","url":"https://gta6lowdown.github.io/GTA6Lowdown","logo":"https://gta6lowdown.github.io/GTA6Lowdown/img/logo.png","description":"Unofficial GTA 6 fan channel: what's confirmed, what's rumor, and the older games explained.","sameAs":["https://www.youtube.com/@GTA6Lowdown","https://x.com/GTA6LWDWN","https://www.instagram.com/gta6lwdwn/","https://www.pinterest.com/GTA6LWDWN/"]}
 </script>
-<style>
-:root{
-  --brown:#3e2113; --brown-mid:#533927; --orange:#e28202; --orange-b:#ef9706; --white:#fefefb;
-  --paper:#f3e6cc; --cork:#b98a52; --sticky:#fbe98c; --teal:#176767; --red:#b8322a; --dusk:#4a2c4f;
-  --ground:#fbf4e6; --text:#3e2113; --muted:#6b4a32; --panel:#f3e6cc; --card:#fffdf8; --focus:#176767;
-  --display:"Anton",Impact,"Arial Narrow",sans-serif; --marker:"Permanent Marker","Comic Sans MS",cursive;
-  --hand:"Caveat","Segoe Print",cursive; --body:"Archivo",system-ui,sans-serif;
-  --shadow:4px 6px 0 rgba(0,0,0,.35); --shadow-lift:6px 12px 0 rgba(0,0,0,.35);
-}
-html[data-theme="dark"] .kicker{color:#b25e00}
-html[data-theme="dark"]{--ground:#f3e6cc; --text:#3e2113; --muted:#6b4a32; --panel:#e9d6b2; --card:#f3e6cc; --focus:#ef9706}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-body{margin:0;background:var(--ground);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.55}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
-.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.01em;line-height:1.05;margin:0}
-h2{font-size:clamp(34px,5vw,54px)}
-h2 .w{color:var(--text)} h2 .o{color:var(--orange)}
-.kicker{font-family:var(--marker);color:#b25e00;font-size:18px;margin:0 0 6px}
-.lede{color:var(--muted);max-width:62ch;margin:10px 0 0}
-section{padding:72px 0;position:relative}
-.skip{position:absolute;left:-999px;top:0;background:var(--sticky);color:var(--brown);padding:10px 14px;z-index:99}
-.skip:focus{left:10px;top:10px}
-
-/* torn paper band */
-.torn{background:var(--orange);clip-path:polygon(0 14%,6% 4%,13% 16%,21% 2%,30% 12%,38% 0,47% 13%,56% 3%,64% 15%,73% 1%,82% 12%,90% 2%,100% 10%,100% 88%,93% 100%,84% 86%,75% 97%,66% 85%,57% 99%,48% 87%,39% 98%,30% 86%,21% 97%,12% 85%,5% 96%,0 86%)}
-
-/* nav */
-header.top{position:sticky;top:0;z-index:50;background:var(--brown);border-bottom:4px solid var(--orange)}
-.nav{display:flex;align-items:center;gap:16px;min-height:68px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand img{width:48px;height:48px}
-.brand span{font-family:var(--display);font-size:24px;color:var(--white)} .brand b{font-weight:400;color:var(--orange)}
-.nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0;flex-wrap:wrap}
-.nav ul a{display:block;font-family:var(--display);font-size:17px;letter-spacing:.03em;color:var(--white);text-decoration:none;padding:8px 10px}
-.nav ul a:hover{color:var(--orange-b)}
-.stars{display:flex;gap:2px;margin-left:8px}
-.stars svg{width:20px;height:20px}
-.navtoggle{display:none;margin-left:auto;background:none;border:2px solid var(--orange);color:var(--white);font-family:var(--display);font-size:16px;padding:6px 12px;cursor:pointer}
-@media (max-width:900px){
-  .navtoggle{display:block}
-  .nav{flex-wrap:wrap}
-  .nav ul{display:none;width:100%;flex-direction:column;padding-bottom:12px}
-  .nav ul.open{display:flex}
-  .stars{display:none}
-}
-
-/* hero */
-.hero{padding:0;background:#fbf4e6;color:var(--brown);overflow:hidden}
-.hero .band{position:absolute;inset:18% -5% 22% -5%;transform:rotate(-4deg)}
-.hero .inner{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;padding:70px 20px 80px}
-.hero h1{font-size:clamp(56px,9vw,120px);line-height:.92}
-.hero h1 .w{color:var(--white);text-shadow:-3px -3px 0 var(--brown),3px -3px 0 var(--brown),-3px 3px 0 var(--brown),3px 3px 0 var(--brown),0 4px 0 var(--brown),6px 8px 0 rgba(0,0,0,.25)} .hero h1 .o{color:var(--brown)}
-.hero p.tag{font-family:var(--marker);font-size:22px;margin:14px 0 22px;color:var(--brown)}
-.mast{width:120px;height:auto;position:absolute;right:6%;top:6%}
-.wanted-hint{display:flex;align-items:center;gap:10px;margin:22px 0 0;font-family:var(--marker);font-size:18px;color:var(--brown)}
-.wanted-hint svg polygon{stroke:var(--brown)}
-.wanted-hint svg{width:26px;height:26px}
-.countdown{background:var(--paper);color:var(--brown);padding:20px 22px;box-shadow:var(--shadow);transform:rotate(2deg);max-width:360px;justify-self:end}
-.countdown h3{font-size:22px;color:var(--teal)}
-.countdown .num{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0 8px;text-align:center}
-.countdown .num b{display:block;font-family:var(--display);font-size:40px;font-weight:400;line-height:1}
-.countdown .num small{font-size:12px;letter-spacing:.06em;text-transform:uppercase}
-.countdown p{margin:0;font-size:14px}
-@media (max-width:820px){.hero .inner{grid-template-columns:1fr}.countdown{justify-self:start}.mast{display:none}}
-
-.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-size:20px;letter-spacing:.03em;text-decoration:none;padding:12px 20px;border:0;cursor:pointer;box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s}
-.btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}
-.btn.dark{background:var(--brown);color:var(--white)}
-.btn.orange{background:var(--orange);color:var(--brown)}
-.btn.paper{background:var(--paper);color:var(--brown)}
-.btn.teal{background:var(--teal);color:var(--white)}
-.btns{display:flex;flex-wrap:wrap;gap:12px}
-
-/* latest */
-.latest{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;margin-top:28px}
-@media (max-width:820px){.latest{grid-template-columns:1fr}}
-
-/* video cards */
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
-.filters button{font-family:var(--display);font-size:16px;letter-spacing:.03em;background:transparent;color:var(--text);border:2px solid var(--orange);padding:7px 14px;cursor:pointer}
-.filters button[aria-pressed="true"]{background:var(--orange);color:var(--brown)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:26px}
-.vcard{display:block;text-decoration:none;color:var(--brown);background:var(--card);border-top:6px solid var(--orange);box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s}
-.vcard:hover,.vcard:focus-visible{transform:translateY(-4px) rotate(-.6deg);box-shadow:var(--shadow-lift)}
-.thumb{position:relative;aspect-ratio:16/9;background:var(--brown-mid);overflow:hidden;display:flex;align-items:center;justify-content:center}
-.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.thumb .fb{font-family:var(--display);color:var(--orange);font-size:54px;opacity:.9}
-.thumb .play{position:absolute;right:10px;bottom:10px;background:var(--orange);color:var(--brown);font-family:var(--display);font-size:14px;padding:4px 10px}
-.vcard .meta{padding:14px 16px 16px}
-.vcard h3{font-size:21px;line-height:1.15}
-.vcard p{margin:8px 0 0;font-size:14px;color:#6b4a32}
-.chip{display:inline-block;font-family:var(--display);font-size:13px;letter-spacing:.04em;padding:2px 8px;margin-bottom:8px}
-.chip.ex{background:var(--teal);color:var(--white)} .chip.mu{background:var(--orange);color:var(--brown)} .chip.ch{background:var(--brown);color:var(--white)}
-.vcard[hidden]{display:none}
-
-/* corkboard news */
-.cork{background:var(--cork);padding:34px;border:14px solid var(--brown-mid);box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:30px;margin-top:28px}
-.clip{background:var(--paper);color:var(--brown);padding:20px 18px 18px;box-shadow:var(--shadow);position:relative}
-.clip:nth-child(3n+1){transform:rotate(-1.5deg)} .clip:nth-child(3n+2){transform:rotate(1.2deg)} .clip:nth-child(3n){transform:rotate(-.6deg)}
-.clip::before{content:"";position:absolute;top:-8px;left:50%;width:16px;height:16px;border-radius:999px;background:var(--red);box-shadow:1px 2px 0 rgba(0,0,0,.3);transform:translateX(-50%)}
-.clip time{font-size:13px;color:#6b4a32}
-.clip h3{font-size:22px;margin:4px 0 8px;line-height:1.1}
-.clip p{margin:0 0 10px;font-size:15px}
-.clip .src{font-size:13px}
-.stamp{display:inline-block;font-family:var(--display);font-size:18px;letter-spacing:.06em;border:3px solid;padding:0 10px;transform:rotate(-4deg);margin-bottom:6px}
-.stamp.yes{color:var(--teal)} .stamp.no{color:#b25e00}
-.clip.sticky{background:var(--sticky)}
-.clip.sticky p{font-family:var(--hand);font-size:24px;line-height:1.2}
-
-/* shorts */
-.phones{display:flex;gap:24px;overflow-x:auto;padding:18px 4px 26px;margin-top:20px;scroll-snap-type:x mandatory}
-.phone{flex:0 0 210px;aspect-ratio:9/16;background:#140a04;border-radius:26px;padding:12px;box-shadow:var(--shadow);scroll-snap-align:start}
-.phone .scr{height:100%;border-radius:16px;background:var(--dusk);color:var(--white);display:flex;flex-direction:column;justify-content:flex-end;padding:16px}
-.phone .scr b{font-family:var(--display);font-weight:400;font-size:22px;line-height:1.1}
-.phone .scr span{font-size:13px;color:var(--muted)}
-.note{background:var(--sticky);color:var(--brown);font-family:var(--hand);font-size:24px;padding:14px 18px;box-shadow:var(--shadow);display:inline-block;transform:rotate(-1deg)}
-
-/* quiz */
-.quizbox{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
-@media (max-width:820px){.quizbox{grid-template-columns:1fr}}
-.quizbox .machine.lead .answers .btn{font-size:17px}
-.machine{background:var(--brown-mid);border:6px solid var(--orange);padding:26px;box-shadow:var(--shadow);color:var(--white)}
-.screen{background:var(--dusk);padding:22px;min-height:190px;display:flex;flex-direction:column;justify-content:center}
-.screen .q{font-family:var(--display);font-size:26px;line-height:1.15}
-.screen .fbk{margin-top:12px;font-size:15px;color:var(--sticky);min-height:44px}
-.answers{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
-.answers .btn{flex:1;justify-content:center;min-width:140px}
-.score{font-family:var(--display);font-size:18px;margin-top:14px;color:var(--orange-b)}
-.soon{background:var(--card);color:var(--brown);padding:24px;box-shadow:var(--shadow)}
-.soon h3{font-size:28px}
-.soon ul{margin:12px 0 0;padding-left:20px}
-
-/* old games */
-.shelf{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:28px;border-bottom:16px solid var(--brown-mid);padding-bottom:0}
-@media (max-width:900px){.shelf{grid-template-columns:repeat(2,1fr);border-bottom:0}}
-.case{background:var(--card);color:var(--brown);box-shadow:var(--shadow);display:flex;flex-direction:column}
-.case .spine{font-family:var(--display);font-size:28px;padding:16px;line-height:1}
-.case:nth-child(1) .spine{background:var(--brown-mid);color:var(--paper)}
-.case:nth-child(2) .spine{background:#c8467a;color:var(--white)}
-.case:nth-child(3) .spine{background:var(--orange);color:var(--brown)}
-.case:nth-child(4) .spine{background:var(--teal);color:var(--white)}
-.case:nth-child(5) .spine{background:var(--brown);color:var(--orange)}
-.case .body{padding:14px 16px 18px;font-size:15px;flex:1;display:flex;flex-direction:column}
-.case .yr{font-family:var(--marker);color:#b25e00}
-.case a{margin-top:auto;padding-top:10px;font-weight:700}
-
-/* info notebook */
-.notebook{background:var(--paper);color:var(--brown);box-shadow:var(--shadow);margin-top:28px;border-left:22px solid var(--teal);background-image:repeating-linear-gradient(transparent 0 33px,#e0cba4 33px 34px)}
-details{border-bottom:2px dashed #d8c3a5;padding:0 24px}
-summary{font-family:var(--display);font-size:24px;padding:18px 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
-summary::after{content:"+";color:var(--orange)} details[open] summary::after{content:"–"}
-details .ans{padding:0 0 20px;max-width:75ch}
-details .ans p{margin:0 0 10px}
-
-/* socials */
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:24px;margin-top:28px}
-.post{display:block;text-decoration:none;padding:24px 20px;box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s}
-.post:hover,.post:focus-visible{transform:translateY(-4px) rotate(1deg);box-shadow:var(--shadow-lift)}
-.post b{display:block;font-family:var(--display);font-weight:400;font-size:30px;line-height:1}
-.post span{font-family:var(--marker);font-size:16px}
-.p1{background:var(--orange);color:var(--brown)} .p2{background:var(--paper);color:var(--brown)} .p3{background:var(--teal);color:var(--white)}
-.p4{background:var(--brown-mid);color:var(--white);border:3px solid var(--orange)} .p5{background:var(--sticky);color:var(--brown)}
-
-/* fun */
-.funrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;margin-top:28px}
-.fun{background:var(--card);border-top:6px solid var(--teal);padding:22px;box-shadow:var(--shadow)}
-.fun h3{font-size:26px;color:#b25e00}
-.fun p{margin:8px 0 14px}
-.factout{font-family:var(--hand);font-size:24px;line-height:1.2;min-height:60px;background:var(--sticky);color:var(--brown);padding:10px 14px;margin-top:12px}
-
-section.band-or{background:var(--orange);color:var(--brown)}
-section.band-or h2 .w{color:var(--brown)} section.band-or h2 .o{color:var(--white)} section.band-or .kicker{color:var(--brown)} section.band-or .lede{color:var(--brown)}
-.tipgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-top:28px}
-.tip{background:var(--card);color:var(--brown);padding:22px;box-shadow:var(--shadow);border-left:8px solid var(--orange)}
-.tip .tn{font-family:var(--display);font-size:40px;color:var(--orange);line-height:1}
-.tip h3{font-size:24px;margin:6px 0 8px}
-.tip p{margin:0 0 8px;font-size:15px}
-.tip .src{font-size:13px;color:#6b4a32;margin:0}
-.tip.sticky{background:var(--sticky);border-left:0;font-family:var(--hand);font-size:24px}
-.tip.sticky p{font-size:24px}
-.cheatwrap{display:grid;grid-template-columns:.8fr 1.6fr;gap:28px;margin-top:28px;align-items:start}
-@media (max-width:820px){.cheatwrap{grid-template-columns:1fr}}
-.gta6cheat{background:var(--brown);color:var(--white);padding:26px;box-shadow:var(--shadow)}
-.gta6cheat h3{font-size:30px;margin:8px 0}
-.gta6cheat .stamp{color:var(--orange-b)}
-.cheatbox{background:var(--card);color:var(--brown);padding:24px;box-shadow:var(--shadow)}
-.cheatbox h3{font-size:28px}
-.small{font-size:14px;color:#6b4a32}
-.tablewrap{overflow-x:auto}
-table{border-collapse:collapse;width:100%;min-width:520px;margin:12px 0}
-th,td{text-align:left;padding:10px 8px;border-bottom:2px dashed #e0cba4}
-th{font-family:var(--display);font-weight:400;font-size:16px;letter-spacing:.04em;color:#b25e00}
-td:nth-child(2),td:nth-child(3){font-family:ui-monospace,Consolas,monospace;font-weight:700}
-.copy{font-family:var(--display);font-size:14px;background:var(--teal);color:var(--white);border:0;padding:6px 10px;cursor:pointer}
-.mapbox{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;margin-top:28px;align-items:center}
-.mapbox svg{width:100%;height:auto;box-shadow:var(--shadow)}
-@media (max-width:820px){.mapbox{grid-template-columns:1fr}}
-.mapnotes p{margin:0 0 12px}
-footer{background:#2a170c;color:var(--muted);padding:40px 0 60px;font-size:14px}
-footer .wrap{display:grid;gap:12px}
-footer img{width:56px}
-.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--sticky);color:var(--brown);font-family:var(--marker);padding:12px 18px;box-shadow:var(--shadow);z-index:80}
-.toast[hidden]{display:none}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-
-/* official Rockstar images */
-.credit{font-size:13px;color:var(--muted);margin:18px 0 0}
-section.band-or .credit{color:var(--brown)}
-.heroside{justify-self:end;max-width:420px;width:100%;position:relative}
-.heroart{margin:0 0 -22px 20px;background:var(--white);padding:10px 10px 12px;box-shadow:var(--shadow);transform:rotate(-3deg);position:relative}
-.heroart::before{content:"";position:absolute;top:-12px;left:50%;width:90px;height:26px;background:rgba(251,233,140,.85);transform:translateX(-50%) rotate(2deg);box-shadow:1px 1px 0 rgba(0,0,0,.15)}
-.heroart img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:50% 30%}
-.heroart figcaption{font-size:12px;color:var(--muted);margin-top:6px;text-align:right}
-.heroside .countdown{position:relative;z-index:1;max-width:none;margin-left:auto;width:88%}
-@media (max-width:820px){.heroside{justify-self:start}}
-.thumb img.fbimg{z-index:0}
-.thumb img.yt{z-index:2}
-.thumb .fb{position:relative;z-index:1;text-shadow:3px 3px 0 var(--brown)}
-.thumb .play{z-index:3}
-.clip .pic{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border:6px solid var(--white);box-shadow:2px 3px 0 rgba(0,0,0,.25);margin:4px 0 10px}
-.tip .pic{display:block;width:calc(100% + 44px);margin:-22px -22px 14px;aspect-ratio:16/9;object-fit:cover}
-.tip .pic.top{object-position:50% 25%}
-.nbart{display:block;width:100%;height:320px;object-fit:cover;object-position:50% 2%;border-bottom:6px solid var(--orange)}
-.case .art{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-bottom:4px solid var(--brown)}
-
-/* ===== liquid glass layer (v02) ===== */
-:root{
-  --glass:linear-gradient(135deg,rgba(255,255,255,.62),rgba(255,250,240,.28));
-  --glass-dark:linear-gradient(135deg,rgba(83,57,39,.62),rgba(62,33,19,.42));
-  --glass-edge:1px solid rgba(255,255,255,.65);
-  --glass-edge-dark:1px solid rgba(255,255,255,.16);
-  --glass-shadow:0 10px 30px rgba(62,33,19,.16),0 2px 6px rgba(62,33,19,.10),inset 0 1px 0 rgba(255,255,255,.85),inset 0 -1px 0 rgba(255,255,255,.25);
-  --glass-shadow-dark:0 12px 34px rgba(20,10,4,.35),inset 0 1px 0 rgba(255,255,255,.22);
-  --blur:blur(18px) saturate(170%);
-  --r:18px;
-}
-/* soft colour blobs so the glass has something to bend */
-body{background:var(--ground)}
-body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:
-  radial-gradient(900px 600px at 8% 12%,rgba(226,130,2,.10),transparent 60%),
-  radial-gradient(800px 600px at 92% 38%,rgba(23,103,103,.08),transparent 60%),
-  radial-gradient(900px 700px at 20% 78%,rgba(226,130,2,.08),transparent 60%)}
-section[style*="--panel"]{background:linear-gradient(180deg,rgba(243,230,204,.85),rgba(243,230,204,.6))!important}
-
-/* header: frosted brown */
-header.top{background:rgba(62,33,19,.72);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);border-bottom:0;box-shadow:0 1px 0 rgba(255,255,255,.10) inset,0 2px 0 var(--orange),0 10px 30px rgba(20,10,4,.25)}
-.nav ul a{border-radius:999px;transition:background .2s,color .2s}
-.nav ul a:hover{background:rgba(255,255,255,.10);color:var(--orange-b)}
-.navtoggle{border-radius:999px;background:rgba(255,255,255,.08)}
-
-/* glass surfaces */
-.countdown,.vcard,.tip,.soon,.cheatbox,.fun,.case,.notebook,.filters,.heroart,.toast{
-  border-radius:var(--r)}
-.countdown,.vcard,.tip:not(.sticky),.soon,.cheatbox,.fun,.case{
-  background:var(--glass);border:var(--glass-edge);box-shadow:var(--glass-shadow);
-  -webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);overflow:hidden;position:relative}
-/* specular sheen across the top of each pane */
-.countdown::after,.vcard::after,.tip:not(.sticky)::after,.soon::after,.cheatbox::after,.fun::after,.case::after,.machine::after,.post::after{
-  content:"";position:absolute;inset:0 0 auto 0;height:46%;pointer-events:none;border-radius:inherit;
-  background:linear-gradient(180deg,rgba(255,255,255,.38),rgba(255,255,255,0));mix-blend-mode:soft-light}
-
-/* hero */
-.hero{background:radial-gradient(700px 420px at 78% 40%,rgba(255,255,255,.55),transparent 70%),#fbf4e6}
-.heroart{padding:8px;background:rgba(255,255,255,.55);border:var(--glass-edge);box-shadow:var(--glass-shadow);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}
-.heroart img{border-radius:12px}
-.heroart::before{border-radius:3px}
-.heroart figcaption{padding:0 4px}
-.countdown{transform:rotate(1.2deg);padding:22px 24px}
-.countdown .num>div{background:rgba(255,255,255,.45);border:1px solid rgba(255,255,255,.7);border-radius:12px;padding:8px 0 6px;box-shadow:inset 0 1px 0 rgba(255,255,255,.9)}
-
-/* buttons: glossy pills */
-.btn{border-radius:999px;box-shadow:0 8px 20px rgba(62,33,19,.22),inset 0 1px 0 rgba(255,255,255,.45),inset 0 -2px 0 rgba(0,0,0,.12);position:relative;overflow:hidden}
-.btn::before{content:"";position:absolute;inset:0 0 45% 0;border-radius:999px 999px 40% 40%/999px 999px 100% 100%;background:linear-gradient(180deg,rgba(255,255,255,.32),rgba(255,255,255,0));pointer-events:none}
-.btn:hover{box-shadow:0 14px 28px rgba(62,33,19,.28),inset 0 1px 0 rgba(255,255,255,.5),inset 0 -2px 0 rgba(0,0,0,.12)}
-.btn.paper{background:rgba(255,255,255,.6);border:var(--glass-edge);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}
-.copy{border-radius:999px;box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
-
-/* video filters: segmented glass */
-.filters{display:inline-flex;padding:6px;background:var(--glass);border:var(--glass-edge);box-shadow:var(--glass-shadow);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);border-radius:999px}
-.filters button{border:0;border-radius:999px;transition:background .2s,box-shadow .2s}
-.filters button[aria-pressed="true"]{box-shadow:0 4px 12px rgba(226,130,2,.35),inset 0 1px 0 rgba(255,255,255,.5)}
-@media (max-width:620px){.filters{display:flex;flex-wrap:nowrap;overflow-x:auto;max-width:100%;scrollbar-width:none}.filters::-webkit-scrollbar{display:none}.filters button{white-space:nowrap;flex:0 0 auto}}
-
-/* video cards */
-.vcard{border-top:0}
-.vcard .thumb{border-radius:12px;margin:8px 8px 0}
-.vcard:hover,.vcard:focus-visible{transform:translateY(-5px);box-shadow:0 18px 40px rgba(62,33,19,.22),inset 0 1px 0 rgba(255,255,255,.9)}
-.thumb .play{border-radius:999px;background:rgba(62,33,19,.45);color:var(--white);border:1px solid rgba(255,255,255,.35);-webkit-backdrop-filter:blur(10px) saturate(160%);backdrop-filter:blur(10px) saturate(160%);padding:5px 12px}
-.latest .vcard .thumb{margin:10px}
-.chip{border-radius:999px;padding:3px 10px}
-
-/* news wall: paper clippings stay, the board gets a glass frame */
-.cork{border-radius:24px;border:0;box-shadow:inset 0 0 0 10px rgba(83,57,39,.85),inset 0 0 0 11px rgba(255,255,255,.25),0 16px 40px rgba(62,33,19,.25)}
-.clip .pic{border-radius:4px}
-
-/* tips */
-.tip{border-left:0}
-.tip:not(.sticky){border-top:5px solid var(--orange)}
-.tip .pic{margin-top:-27px}
-.tip.sticky{border-radius:6px}
-
-/* notebook and cases */
-.notebook{overflow:hidden;box-shadow:var(--glass-shadow)}
-.case{border:var(--glass-edge)}
-.case .spine{position:relative}
-.case .spine::after{content:"";position:absolute;inset:0 0 50% 0;background:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,0))}
-.case .art{border-bottom:0}
-.shelf{border-bottom:0;gap:20px}
-
-/* shorts phones: glass screens */
-.phone{border-radius:30px;background:linear-gradient(160deg,#2a170c,#140a04);box-shadow:0 18px 40px rgba(20,10,4,.35),inset 0 1px 0 rgba(255,255,255,.18)}
-.phone .scr{border-radius:20px;background:
-  radial-gradient(120% 80% at 20% 0%,rgba(239,151,6,.55),transparent 60%),
-  radial-gradient(120% 80% at 100% 100%,rgba(23,103,103,.6),transparent 60%),var(--dusk);position:relative;overflow:hidden}
-.phone .scr span{color:rgba(255,255,255,.75)}
-.phone .scr b{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:10px 12px;margin-top:6px;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
-
-/* quiz machines: dark glass */
-.machine{border:0;border-radius:24px;background:var(--glass-dark),var(--brown-mid);box-shadow:var(--glass-shadow-dark),inset 0 0 0 2px rgba(226,130,2,.7);position:relative;overflow:hidden}
-.screen{border-radius:16px;background:radial-gradient(120% 90% at 0% 0%,rgba(239,151,6,.35),transparent 60%),radial-gradient(120% 90% at 100% 100%,rgba(23,103,103,.45),transparent 60%),var(--dusk);border:1px solid rgba(255,255,255,.15);box-shadow:inset 0 1px 0 rgba(255,255,255,.2)}
-.gta6cheat{border-radius:var(--r);background:var(--glass-dark),var(--brown);box-shadow:var(--glass-shadow-dark)}
-
-/* socials: tinted glass tiles */
-.post{border-radius:var(--r);position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.4);box-shadow:0 10px 26px rgba(62,33,19,.2),inset 0 1px 0 rgba(255,255,255,.5)}
-.post:hover,.post:focus-visible{transform:translateY(-5px)}
-.p2{background:var(--glass);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}
-.p4{border:1px solid rgba(239,151,6,.6)}
-
-/* fun */
-.fun{border-top:0}
-.fun::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--teal)}
-.factout{border-radius:12px}
-
-/* instagram reels */
-.reels{gap:20px}
-.reel{flex:0 0 328px;height:620px;border-radius:22px;overflow:hidden;scroll-snap-align:start;background:var(--glass);border:var(--glass-edge);box-shadow:var(--glass-shadow);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);padding:6px}
-.reel iframe{display:block;width:100%;height:100%;border:0;border-radius:16px;background:#fff}
-@media (max-width:420px){.reel{flex-basis:calc(100vw - 52px);height:580px}}
-
-/* articles */
-.artgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px;margin-top:28px}
-.acard{display:block;text-decoration:none;color:var(--brown);background:var(--glass);border:var(--glass-edge);box-shadow:var(--glass-shadow);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);border-radius:var(--r);overflow:hidden;transition:transform .15s,box-shadow .15s}
-.acard:hover,.acard:focus-visible{transform:translateY(-5px);box-shadow:0 18px 40px rgba(62,33,19,.22),inset 0 1px 0 rgba(255,255,255,.9)}
-.acard img{display:block;width:calc(100% - 16px);margin:8px 8px 0;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
-.acard .ameta{padding:14px 16px 18px}
-.acard h3{font-size:22px;line-height:1.15}
-.acard p{margin:8px 0 0;font-size:14px;color:#6b4a32}
-
-/* toast */
-.toast{background:rgba(251,233,140,.75);border:var(--glass-edge);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);box-shadow:var(--glass-shadow);border-radius:999px}
-
-/* map */
-.mapbox svg{border-radius:var(--r)}
-
-/* footer: deeper glass */
-footer{background:linear-gradient(180deg,#2a170c,#1c0f07);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
-footer p{color:#b89b7f}
-
-/* where glass isn't supported or people ask for less transparency */
-@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .countdown,.vcard,.tip:not(.sticky),.soon,.cheatbox,.fun,.case,.filters,.heroart,.btn.paper,.p2,.toast{background:var(--card)}
-  header.top{background:var(--brown)}
-}
-@media (prefers-reduced-transparency:reduce){
-  .countdown,.vcard,.tip:not(.sticky),.soon,.cheatbox,.fun,.case,.filters,.heroart,.btn.paper,.p2,.toast{background:var(--card);backdrop-filter:none;-webkit-backdrop-filter:none}
-  header.top{background:var(--brown);backdrop-filter:none}
-}
-</style>
+<link rel="stylesheet" href="css/site.css">
 </head>
-<body>
+<body data-page="home">
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="top">
   <div class="wrap nav">
-    <a class="brand" href="#home"><img src="img/logo.png" alt=""><span>GTA 6 <b>LOWDOWN</b></span></a>
+    <a class="brand" href="index.html"><img src="img/logo.png" alt=""><span>GTA 6 <b>LOWDOWN</b></span></a>
     <button class="navtoggle" type="button" aria-expanded="false" aria-controls="navlist">MENU</button>
     <ul id="navlist">
-      <li><a href="#videos">Videos</a></li>
-      <li><a href="#articles">Articles</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#shorts">Shorts</a></li>
-      <li><a href="#tips">Tips</a></li>
-      <li><a href="#cheats">Cheats</a></li>
-      <li><a href="#quiz">Quizzes</a></li>
-      <li><a href="#old-games">Old games</a></li>
-      <li><a href="#info">Info</a></li>
-      <li><a href="#map">Map</a></li>
-      <li><a href="#follow">Socials</a></li>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="tips.html">Tips</a></li>
+      <li><a href="guides.html">Guides</a></li>
+      <li><a href="leonida.html">Leonida</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="cheats.html">Cheats</a></li>
+      <li><a href="old-games.html">Old games</a></li>
+      <li><a href="videos.html">Videos</a></li>
     </ul>
     <div class="stars" role="img" id="stars" aria-label="Wanted level: 0 of 5 stars"></div>
   </div>
 </header>
 
 <main id="main">
-<!-- HERO -->
 <section class="hero" id="home">
   <div class="band torn" aria-hidden="true"></div>
   <svg class="mast" viewBox="0 0 120 150" aria-hidden="true"><g fill="none" stroke="#3e2113" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M60 40 L38 145 M60 40 L82 145 M47 95 H73 M42 120 H78 M50 70 L72 100 M70 70 L48 100"/><path d="M28 30 l-8 -10 l-8 10 l-8 -10 M92 30 l8 -10 l8 10 l8 -10" stroke="#fefefb"/></g><circle cx="60" cy="34" r="10" fill="#3e2113"/></svg>
   <div class="wrap inner">
     <div>
-      <p class="kicker">Unofficial GTA 6 fan channel</p>
+      <p class="kicker">Unofficial GTA 6 fan site</p>
       <h1><span class="w">GTA 6</span><br><span class="o">LOWDOWN</span></h1>
-      <p class="tag">What's confirmed. What's rumor. No hype.</p>
+      <p class="tag">News, gameplay tips, guides and games for GTA 6.</p>
       <div class="btns">
-        <a class="btn dark" href="https://www.youtube.com/@GTA6Lowdown?sub_confirmation=1">&#9654; Subscribe on YouTube</a>
-        <a class="btn paper" href="#videos">Watch the videos</a>
+        <a class="btn dark" href="news.html">Latest news</a>
+        <a class="btn paper" href="articles/launch-day-guide.html">Launch day guide</a>
       </div>
-      <p class="wanted-hint"><span id="herostars" aria-hidden="true"></span> Explore the site to raise your wanted level.</p>
+      <p class="wanted-hint"><span id="herostars" aria-hidden="true"></span> Visit every page to raise your wanted level.</p>
     </div>
     <div class="heroside">
     <figure class="heroart"><img src="img/hero_jason-lucia.jpg" alt="Official GTA 6 artwork of Jason and Lucia by a car under palm trees in Vice City" width="1600" height="900"><figcaption>Images: Rockstar Games</figcaption></figure>
@@ -445,56 +72,40 @@ footer p{color:#b89b7f}
   </div>
 </section>
 
-<!-- LATEST -->
-<section id="latest">
+<section id="news" class="band-or">
   <div class="wrap">
-    <p class="kicker">Fresh off the press</p>
-    <h2><span class="w">LATEST</span> <span class="o">VIDEO</span></h2>
-    <div class="latest">
-      <a class="vcard" href="https://youtu.be/Kj4f632x-ns">
-        <div class="thumb"><img class="fbimg" src="img/latest_vice-city-marina.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/Kj4f632x-ns/maxresdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#10</span><span class="play">&#9654; WATCH ON YOUTUBE</span></div>
-      </a>
-      <div>
-        <span class="chip mu">MUSIC</span>
-        <h3 style="font-size:34px">GTA 6 Music Festival: Who Is Actually Playing in Miami?</h3>
-        <p class="lede">Rockstar and PlayStation's festival in Miami on Saturday 21 November: the full lineup, and what it might tell us about the in-game radio.</p>
-        <div class="btns" style="margin-top:18px"><a class="btn orange" href="https://youtu.be/Kj4f632x-ns">&#9654; Watch now</a></div>
-      </div>
+    <p class="kicker">Latest from Leonida</p>
+    <h2><span class="w">NEWS AND</span> <span class="o">UPDATES</span></h2>
+    <p class="lede">Every item says whether it's CONFIRMED by Rockstar or still a RUMOR, with the source.</p>
+    <div class="cork">
+      <article class="clip"><span class="stamp yes">CONFIRMED</span><time datetime="2026-11-19">Launch: 19 Nov 2026</time><img class="pic" src="img/news_vice-city-sign.jpg" alt="The Vice City sign at sunset, with a plane overhead" loading="lazy"><h3>GTA 6 unlocks at midnight local time</h3><p>On PS5 and Xbox Series X|S. Rockstar is also giving a free digital map of Leonida on launch day.</p><a class="src" href="https://www.rockstargames.com/newswire">Source: Rockstar Newswire</a></article>
+      <article class="clip"><span class="stamp yes">CONFIRMED</span><time datetime="2026-11-10">10 Nov 2026</time><img class="pic" src="img/news_leonida-keys.jpg" alt="A seaplane over the Leonida Keys" loading="lazy"><h3>Preload is open</h3><p>The pre-load needs up to 212GB, depending on your console. PS5 opened at midnight local, Xbox at 12 a.m. GMT.</p><a class="src" href="https://www.rockstargames.com/newswire">Source: Rockstar Newswire</a></article>
+      <article class="clip"><span class="stamp yes">CONFIRMED</span><time datetime="2026-11-21">Sat 21 Nov 2026</time><img class="pic" src="img/news_vice-city-postcard.jpg" alt="Official Vice City postcard artwork" loading="lazy"><h3>GTA 6: The Festival, Miami</h3><p>Rockstar and PlayStation's festival at Mana Wynwood, two days after launch. Two stages of artists from the game and the album. Tickets were by lottery, which closed on 10 November.</p><a class="src" href="https://www.rockstargames.com/VI/gtavi-thefestival">Source: Rockstar</a></article>
+    </div>
+    <p class="more"><a class="btn paper" href="news.html">All the news &#8594;</a></p>
+    <p class="credit">Images: Rockstar Games</p>
+  </div>
+</section>
+
+<section id="explore">
+  <div class="wrap">
+    <p class="kicker">Pick a page</p>
+    <h2><span class="w">EXPLORE THE</span> <span class="o">LOWDOWN</span></h2>
+    <div class="explore">
+      <a class="acard" href="news.html"><img src="img/news_vice-city-sign.jpg" alt="" loading="lazy"><div class="ameta"><span class="chip ex">NEWS</span><h3>News and updates</h3><p>Launch, pre-load, the album, the festival and what's still unannounced.</p></div></a>
+      <a class="acard" href="tips.html"><img src="img/tip_ambrosia-bikers.jpg" alt="" loading="lazy"><div class="ameta"><span class="chip ex">TIPS</span><h3>Gameplay tips</h3><p>Heat, outfits, weapons and the Criminal Profile, before you play.</p></div></a>
+      <a class="acard" href="guides.html"><img src="img/info_robbery-art.jpg" alt="" loading="lazy"><div class="ameta"><span class="chip ex">GUIDES</span><h3>The guides</h3><p>Long reads: everything we know, launch day, music and radio, Leonida.</p></div></a>
+      <a class="acard" href="leonida.html"><img src="img/news_leonida-keys.jpg" alt="" loading="lazy"><div class="ameta"><span class="chip ch">LEONIDA</span><h3>What we know and the map</h3><p>Quick answers and a hand-drawn map of the regions.</p></div></a>
+      <a class="acard" href="games.html"><img src="img/tip_vault.jpg" alt="" loading="lazy"><div class="ameta"><span class="chip mu">GAMES</span><h3>Quizzes and games</h3><p>Rumor or confirmed? Which lead are you? More games on the way.</p></div></a>
+      <a class="acard" href="cheats.html"><img src="img/tip_jason-pistols.jpg" alt="" loading="lazy"><div class="ameta"><span class="chip ch">CHEATS</span><h3>Cheat codes</h3><p>GTA 5 cheats with copy buttons, and GTA 6 cheats when they land.</p></div></a>
+      <a class="acard" href="old-games.html"><img src="img/case_san-andreas.jpg" alt="" loading="lazy"><div class="ameta"><span class="chip ch">OLD GAMES</span><h3>The older games</h3><p>GTA III to GTA V, and where GTA 6 comes from.</p></div></a>
+      <a class="acard" href="videos.html"><img src="img/latest_vice-city-marina.jpg" alt="" loading="lazy"><div class="ameta"><span class="chip mu">VIDEOS</span><h3>Videos and clips</h3><p>Every GTA 6 Lowdown video, plus the short clips.</p></div></a>
     </div>
     <p class="credit">Images: Rockstar Games</p>
   </div>
 </section>
 
-<!-- VIDEOS -->
-<section id="videos" data-star="1">
-  <div class="wrap">
-    <p class="kicker">Every video, one place</p>
-    <h2><span class="w">ALL THE</span> <span class="o">VIDEOS</span></h2>
-    <p class="lede">Every video opens on YouTube, so your view counts for the channel.</p>
-    <div class="filters" role="group" aria-label="Filter videos">
-      <button type="button" aria-pressed="true" data-f="all">All</button>
-      <button type="button" aria-pressed="false" data-f="ex">GTA 6 explained</button>
-      <button type="button" aria-pressed="false" data-f="mu">Music and radio</button>
-      <button type="button" aria-pressed="false" data-f="ch">Characters and old games</button>
-    </div>
-    <div class="grid" id="vgrid">
-      <a class="vcard" data-cat="mu" href="https://youtu.be/Kj4f632x-ns"><div class="thumb"><img class="fbimg" src="img/latest_vice-city-marina.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/Kj4f632x-ns/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#10</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip mu">MUSIC</span><h3>GTA 6 Music Festival: Who Is Actually Playing in Miami?</h3><p>The Miami festival lineup, act by act.</p></div></a>
-      <a class="vcard" data-cat="ch" href="https://youtu.be/7PDU2oVunqg"><div class="thumb"><img class="fbimg" src="img/case_gta5_v02.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/7PDU2oVunqg/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#8</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip ch">OLD GAMES</span><h3>Trevor Almost DIDN'T EXIST! The Real Backstory of GTA 5 Michael, Franklin, Trevor</h3><p>GTA 5's three leads, as one story.</p></div></a>
-      <a class="vcard" data-cat="ex" href="https://youtu.be/iCxqjwv9jDw"><div class="thumb"><img class="fbimg" src="img/news_leonida-keys.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/iCxqjwv9jDw/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#7</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip ex">EXPLAINED</span><h3>Don't Preload GTA 6 Until You Check This PS5 Setting!</h3><p>Preload, storage, unlock time and the free map.</p></div></a>
-      <a class="vcard" data-cat="ex" href="https://youtu.be/28PWSG1GZi4"><div class="thumb"><img class="fbimg" src="img/tip_ambrosia-bikers.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/28PWSG1GZi4/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#6</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip ex">EXPLAINED</span><h3>Why Old GTA 5 Tactics Are Useless Against GTA 6 Cops</h3><p>Police, Heat, guns and the Criminal Profile.</p></div></a>
-      <a class="vcard" data-cat="mu" href="https://youtu.be/BPeLsFWrLpA"><div class="thumb"><img class="fbimg" src="img/news_vice-city-postcard.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/BPeLsFWrLpA/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#5</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip mu">MUSIC</span><h3>Did Daft Punk Really Say No to GTA 6?</h3><p>One X post, and what's actually confirmed.</p></div></a>
-      <a class="vcard" data-cat="ex" href="https://youtu.be/rxZ47KMNZvg"><div class="thumb"><img class="fbimg" src="img/news_vice-city-sign.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/rxZ47KMNZvg/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#4</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip ex">EXPLAINED</span><h3>Tiny Details in the GTA 6 Trailer Most People Missed</h3><p>Every scene, and the song.</p></div></a>
-      <a class="vcard" data-cat="mu" href="https://youtu.be/TuJw-DFh1vE"><div class="thumb"><img class="fbimg" src="img/tip_lucia-car.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/TuJw-DFh1vE/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#3</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip mu">MUSIC</span><h3>GTA 6 Radio Stations Revealed: Hosts, Songs and What's Still Unknown</h3><p>The six stations confirmed so far.</p></div></a>
-      <a class="vcard" data-cat="ch" href="https://youtu.be/UJiPz06IUT4"><div class="thumb"><img class="fbimg" src="img/hero_jason-lucia.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/UJiPz06IUT4/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#2</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip ch">CHARACTERS</span><h3>Who Is Lucia Caminos? What Rockstar Actually Confirmed (GTA 6)</h3><p>Her story, from Rockstar's own profile.</p></div></a>
-      <a class="vcard" data-cat="ex" href="https://youtu.be/b5Z45qWy9F4"><div class="thumb"><img class="fbimg" src="img/info_robbery-art.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/b5Z45qWy9F4/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#1</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip ex">EXPLAINED</span><h3>What Is ACTUALLY Confirmed for GTA 6? (Release Date &amp; More)</h3><p>Confirmed vs rumor, sorted.</p></div></a>
-    </div>
-    <p style="margin-top:22px"><span class="note">Coming soon: #9, the San Andreas characters</span></p>
-    <p class="credit">Images: Rockstar Games</p>
-  </div>
-</section>
-
-<!-- ARTICLES -->
-<section id="articles" data-star="1" style="background:var(--panel)">
+<section style="background:var(--panel)" id="articles">
   <div class="wrap">
     <p class="kicker">Read the lowdown</p>
     <h2><span class="w">THE</span> <span class="o">GUIDES</span></h2>
@@ -509,199 +120,7 @@ footer p{color:#b89b7f}
   </div>
 </section>
 
-<!-- NEWS -->
-<section id="news" data-star="1" class="band-or">
-  <div class="wrap">
-    <p class="kicker">The news wall</p>
-    <h2><span class="w">NEWS AND</span> <span class="o">UPDATES</span></h2>
-    <p class="lede">Every item says whether it's CONFIRMED by Rockstar or still a RUMOR, with the source.</p>
-    <div class="cork">
-      <article class="clip"><span class="stamp yes">CONFIRMED</span><time datetime="2026-11-19">Launch: 19 Nov 2026</time><img class="pic" src="img/news_vice-city-sign.jpg" alt="The Vice City sign at sunset, with a plane overhead" loading="lazy"><h3>GTA 6 unlocks at midnight local time</h3><p>On PS5 and Xbox Series X|S. Rockstar is also giving a free digital map of Leonida on launch day.</p><a class="src" href="https://www.rockstargames.com/newswire">Source: Rockstar Newswire</a></article>
-      <article class="clip"><span class="stamp yes">CONFIRMED</span><time datetime="2026-11-10">10 Nov 2026</time><img class="pic" src="img/news_leonida-keys.jpg" alt="A seaplane over the Leonida Keys" loading="lazy"><h3>Preload is open</h3><p>The pre-load needs up to 212GB, depending on your console. PS5 opened at midnight local, Xbox at 12 a.m. GMT.</p><a class="src" href="https://www.rockstargames.com/newswire">Source: Rockstar Newswire</a></article>
-      <article class="clip"><span class="stamp yes">CONFIRMED</span><time datetime="2026-11-21">Sat 21 Nov 2026</time><img class="pic" src="img/news_vice-city-postcard.jpg" alt="Official Vice City postcard artwork" loading="lazy"><h3>GTA 6: The Festival, Miami</h3><p>Rockstar and PlayStation's festival at Mana Wynwood, two days after launch. Two stages of artists from the game and the album. Tickets were by lottery, which closed on 10 November.</p><a class="src" href="https://www.rockstargames.com/VI/gtavi-thefestival">Source: Rockstar</a></article>
-      <article class="clip"><span class="stamp yes">CONFIRMED</span><time datetime="2026-11-19">Out 19 Nov 2026</time><h3>Grand Theft Auto VI: The Album</h3><p>34 original tracks with Atlantic Records. Justice's score album, Grand Theft Auto VI: Original Score, follows on 11 December.</p><a class="src" href="https://www.rockstargames.com/newswire">Source: Rockstar Newswire</a></article>
-      <article class="clip"><span class="stamp no">RUMOR</span><time>Still unconfirmed</time><h3>PC version in early 2027?</h3><p>Talked about everywhere, but Rockstar hasn't given a PC date.</p><a class="src" href="https://youtu.be/b5Z45qWy9F4">Our breakdown: video #1</a></article>
-      <article class="clip"><span class="stamp no">RUMOR</span><time>Still unconfirmed</time><h3>GTA 6 Online at launch?</h3><p>No word from Rockstar on online play at launch yet.</p><a class="src" href="https://youtu.be/b5Z45qWy9F4">Our breakdown: video #1</a></article>
-      <article class="clip sticky"><p>We only stamp something CONFIRMED when Rockstar says it. Spotted a rumor? Tell us in the comments!</p></article>
-    </div>
-    <p class="credit">Images: Rockstar Games</p>
-  </div>
-</section>
-
-<!-- SHORTS -->
-<section id="shorts" data-star="1">
-  <div class="wrap">
-    <p class="kicker">Quick hits</p>
-    <h2><span class="w">THE</span> <span class="o">SHORTS</span></h2>
-    <p class="lede">Bite-size GTA 6 clips in under a minute. Press play right here, or scroll sideways for more.</p>
-    <div class="phones reels" tabindex="0" aria-label="Instagram clips, scroll sideways">
-      <div class="reel"><iframe src="https://www.instagram.com/reel/DfyVwRbJ1ir/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (1)" scrolling="no" allowfullscreen></iframe></div>
-      <div class="reel"><iframe src="https://www.instagram.com/reel/DfyIGh1J8KU/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (2)" scrolling="no" allowfullscreen></iframe></div>
-      <div class="reel"><iframe src="https://www.instagram.com/reel/Dfx9z_0J77I/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (3)" scrolling="no" allowfullscreen></iframe></div>
-      <div class="reel"><iframe src="https://www.instagram.com/reel/Dfxsm4AJCZa/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (4)" scrolling="no" allowfullscreen></iframe></div>
-      <div class="reel"><iframe src="https://www.instagram.com/reel/Dfxe3EjJo2N/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (5)" scrolling="no" allowfullscreen></iframe></div>
-      <div class="reel"><iframe src="https://www.instagram.com/reel/DfxRKqgphYN/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (6)" scrolling="no" allowfullscreen></iframe></div>
-      <div class="reel"><iframe src="https://www.instagram.com/reel/DfvxA_Fp5kK/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (7)" scrolling="no" allowfullscreen></iframe></div>
-      <div class="reel"><iframe src="https://www.instagram.com/reel/DfvjQcTp98P/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (8)" scrolling="no" allowfullscreen></iframe></div>
-      <div class="reel"><iframe src="https://www.instagram.com/reel/DfvZCASprAD/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (9)" scrolling="no" allowfullscreen></iframe></div>
-      <div class="reel"><iframe src="https://www.instagram.com/reel/DfvH2kcp0CU/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (10)" scrolling="no" allowfullscreen></iframe></div>
-      <div class="reel"><iframe src="https://www.instagram.com/reel/Dfu6F_6pdAJ/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (11)" scrolling="no" allowfullscreen></iframe></div>
-      <div class="reel"><iframe src="https://www.instagram.com/reel/DfusZTjpvOD/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (12)" scrolling="no" allowfullscreen></iframe></div>
-    </div>
-    <p class="credit">Clips play from Instagram, which may set its own cookies.</p>
-    <a class="btn orange" href="https://www.instagram.com/gta6lwdwn/">&#9654; See all the clips on Instagram</a>
-  </div>
-</section>
-
-<!-- TIPS -->
-<section id="tips" data-star="1" style="background:var(--panel)">
-  <div class="wrap">
-    <p class="kicker">Before you play</p>
-    <h2><span class="w">GAMEPLAY</span> <span class="o">TIPS</span></h2>
-    <p class="lede">What Rockstar has told us about how GTA 6 plays, and what it means for your GTA 5 habits. More tips once the game is out.</p>
-    <div class="tipgrid">
-      <article class="tip"><img class="pic" src="img/tip_ambrosia-bikers.jpg" alt="A biker gang riding through Ambrosia" loading="lazy"><span class="tn">01</span><h3>Change your outfit to lose the cops</h3><p>Police track your outfit and your car. Buying and wearing a new outfit removes your Heat, and switching cars or splitting up Jason and Lucia helps too.</p><p class="src">Rockstar's Rob Nelson, via TGG</p></article>
-      <article class="tip"><img class="pic top" src="img/tip_jason-pistols.jpg" alt="Jason Duval aiming two pistols" loading="lazy"><span class="tn">02</span><h3>You can't carry the whole gun shop</h3><p>Rockstar's Rob Nelson says you can't hide a whole arsenal on you any more. Long guns go in your vehicle's trunk or an Ammu-Nation locker. Previews mention two handguns and two long guns on you, but Rockstar hasn't given exact numbers.</p><p class="src">Rob Nelson (Rockstar North) interviews; previews</p></article>
-      <article class="tip"><img class="pic top" src="img/tip_vault.jpg" alt="Jason and Lucia in a bank vault" loading="lazy"><span class="tn">03</span><h3>The game remembers how you play</h3><p>Your Criminal Profile tracks consistent behaviour, which Rockstar says may affect how the world reacts to you and how the story plays out. There's no right or wrong way to play.</p><p class="src">Rockstar</p></article>
-      <article class="tip"><img class="pic top" src="img/tip_lucia-car.jpg" alt="Lucia sitting on her car at a Vice City car meet" loading="lazy"><span class="tn">04</span><h3>Take the radio with you</h3><p>Radio and on-demand podcasts play on foot, through headphones on Jason's or Lucia's phone.</p><p class="src">Rockstar</p></article>
-      <article class="tip"><span class="tn">05</span><h3>Launch night checklist</h3><p>Pre-load done (up to 212GB, depending on your console), and it unlocks at midnight your local time. Grab the free printable Leonida map from Rockstar's GTA VI site on launch day. <a href="articles/launch-day-guide.html">Full launch day guide</a></p><p class="src">Rockstar Newswire</p></article>
-      <article class="tip sticky"><p>Full breakdowns:</p><p><a href="https://youtu.be/28PWSG1GZi4">&#9654; GTA 5 habits that won't work</a></p><p><a href="https://youtu.be/iCxqjwv9jDw">&#9654; The launch guide</a></p></article>
-    </div>
-    <p class="credit">Images: Rockstar Games</p>
-  </div>
-</section>
-
-<!-- CHEATS -->
-<section id="cheats" data-star="1">
-  <div class="wrap">
-    <p class="kicker">Old school</p>
-    <h2><span class="w">CHEAT</span> <span class="o">CODES</span></h2>
-    <div class="cheatwrap">
-      <div class="gta6cheat"><span class="stamp no">NOT YET</span><h3>GTA 6 cheats</h3><p>Rockstar hasn't revealed any GTA 6 cheats yet. We'll post them here as soon as they're confirmed.</p></div>
-      <div class="cheatbox">
-        <h3>GTA 5 cheats (story mode)</h3>
-        <p class="small">Type the word on PC, or dial the number on your in-game phone on any platform.</p>
-        <div class="tablewrap"><table>
-          <thead><tr><th scope="col">Cheat</th><th scope="col">PC</th><th scope="col">Phone</th><th scope="col"><span class="sr">Copy</span></th></tr></thead>
-          <tbody>
-            <tr><td>Max health and armor</td><td>TURTLE</td><td>1-999-887-853</td><td><button type="button" class="copy" data-c="1-999-887-853">Copy</button></td></tr>
-            <tr><td>Invincibility (5 minutes)</td><td>PAINKILLER</td><td>1-999-7246-545-537</td><td><button type="button" class="copy" data-c="1-999-7246-545-537">Copy</button></td></tr>
-            <tr><td>Weapons and ammo</td><td>TOOLUP</td><td>1-999-866-587</td><td><button type="button" class="copy" data-c="1-999-866-587">Copy</button></td></tr>
-            <tr><td>Lower wanted level</td><td>LAWYERUP</td><td>1-999-5299-3787</td><td><button type="button" class="copy" data-c="1-999-5299-3787">Copy</button></td></tr>
-            <tr><td>Raise wanted level</td><td>FUGITIVE</td><td>1-999-3844-8483</td><td><button type="button" class="copy" data-c="1-999-3844-8483">Copy</button></td></tr>
-            <tr><td>Recharge special ability</td><td>POWERUP</td><td>1-999-769-3787</td><td><button type="button" class="copy" data-c="1-999-769-3787">Copy</button></td></tr>
-          </tbody>
-        </table></div>
-        <p class="small">Cheats don't work in GTA Online, and they switch off trophies and achievements for that session. Sources: <a href="https://www.pcgamer.com/gta-5-cheats">PC Gamer</a>, <a href="https://gamesradar.com/gta-5-cheats/">GamesRadar</a>.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- QUIZ -->
-<section id="quiz" data-star="1" style="background:var(--panel)">
-  <div class="wrap">
-    <p class="kicker">Arcade</p>
-    <h2><span class="w">QUIZZES AND</span> <span class="o">GAMES</span></h2>
-    <div class="quizbox">
-      <div class="machine">
-        <h3 style="font-size:30px;color:var(--orange)">RUMOR OR CONFIRMED?</h3>
-        <div class="screen" aria-live="polite">
-          <div class="q" id="qq">Press START to play.</div>
-          <div class="fbk" id="qf"></div>
-        </div>
-        <div class="answers" id="qa">
-          <button class="btn orange" type="button" id="qstart">START</button>
-        </div>
-        <div class="score" id="qs"></div>
-      </div>
-      <div class="machine lead">
-        <h3 style="font-size:30px;color:var(--orange)">WHICH LEAD ARE YOU?</h3>
-        <div class="screen" aria-live="polite">
-          <div class="q" id="lq">Four questions. Jason or Lucia?</div>
-          <div class="fbk" id="lf"></div>
-        </div>
-        <div class="answers" id="la"><button class="btn orange" type="button" id="lstart">START</button></div>
-      </div>
-      <div class="soon" style="grid-column:1/-1">
-        <h3>MORE GAMES ON THE WAY</h3>
-        <ul><li>Name that radio station</li><li>Old games trivia, GTA III to GTA V</li><li>Spot the difference</li></ul>
-        <p style="margin-top:14px">Want a quiz on something? Tell us in the YouTube comments.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- OLD GAMES -->
-<section id="old-games" data-star="1">
-  <div class="wrap">
-    <p class="kicker">Back in the day</p>
-    <h2><span class="w">THE</span> <span class="o">OLDER GAMES</span></h2>
-    <p class="lede">Where GTA 6 comes from. A series of story videos, game by game.</p>
-    <div class="shelf">
-      <article class="case"><div class="spine">GTA III</div><img class="art" src="img/case_gta3.jpg" alt="Claude and a gang member at dusk in Liberty City, GTA III" loading="lazy"><div class="body"><span class="yr">2001</span><p>Liberty City, and the move to 3D.</p><a href="#old-games">Guide coming soon</a></div></article>
-      <article class="case"><div class="spine">VICE CITY</div><img class="art" src="img/case_vice-city.jpg" alt="A boat on the water in GTA Vice City" loading="lazy"><div class="body"><span class="yr">2002</span><p>The first trip to Vice City, the city GTA 6 goes back to.</p><a href="#old-games">Guide coming soon</a></div></article>
-      <article class="case"><div class="spine">SAN ANDREAS</div><img class="art" src="img/case_san-andreas.jpg" alt="CJ with the Grove Street Families, GTA San Andreas" loading="lazy"><div class="body"><span class="yr">2004</span><p>Three cities, one state.</p><a href="#old-games">Video #9 coming soon</a></div></article>
-      <article class="case"><div class="spine">GTA IV</div><img class="art" src="img/case_gta4.jpg" alt="A bar scene in Liberty City, from the GTA IV Episodes from Liberty City trailer" loading="lazy"><div class="body"><span class="yr">2008</span><p>Back to Liberty City.</p><a href="#old-games">Guide coming soon</a></div></article>
-      <article class="case"><div class="spine">GTA V</div><img class="art" src="img/case_gta5_v02.jpg" alt="Official GTA V artwork of Trevor, Franklin and Michael" loading="lazy"><div class="body"><span class="yr">2013</span><p>Michael, Franklin and Trevor in Los Santos.</p><a href="https://youtu.be/7PDU2oVunqg">&#9654; Watch the backstory</a></div></article>
-    </div>
-    <p class="credit">Images: Rockstar Games</p>
-  </div>
-</section>
-
-<!-- INFO -->
-<section id="info" data-star="1" style="background:var(--panel)">
-  <div class="wrap">
-    <p class="kicker">The notebook</p>
-    <h2><span class="w">GTA 6:</span> <span class="o">WHAT WE KNOW</span></h2>
-    <div class="notebook">
-      <img class="nbart" src="img/info_robbery-art.jpg" alt="Official GTA 6 artwork of Jason and Lucia walking away from a robbery" loading="lazy">
-      <details open><summary>When does GTA 6 come out?</summary><div class="ans"><p>19 November 2026, at midnight local time, on PS5 and Xbox Series X|S. Preload opened on 10 November.</p></div></details>
-      <details><summary>Who are the main characters?</summary><div class="ans"><p>Two leads: Jason Duval and Lucia Caminos. Rockstar says an easy score goes wrong and the pair end up in a criminal conspiracy across Leonida.</p><p><a href="https://youtu.be/UJiPz06IUT4">Watch: who is Lucia Caminos?</a></p></div></details>
-      <details><summary>Where is GTA 6 set?</summary><div class="ans"><p>The state of Leonida, including Vice City and the Leonida Keys.</p></div></details>
-      <details><summary>How much space does it need?</summary><div class="ans"><p>Rockstar says the pre-load needs up to 212GB, depending on your console. That's an upper limit, not an exact install size.</p><p><a href="https://youtu.be/iCxqjwv9jDw">Watch: the launch guide</a></p></div></details>
-      <details><summary>Which radio stations are confirmed?</summary><div class="ans"><p>Six so far: Cocoteo, Back Country, Afro Bank FM, The Chamber 106.6, Flash FM and Dirty South Classics. You can also listen on foot, through headphones on your phone in the game.</p><p><a href="https://youtu.be/TuJw-DFh1vE">Watch: the radio stations</a></p></div></details>
-      <details><summary>Is there a PC version?</summary><div class="ans"><p>Not announced. An early-2027 PC date is a rumor, not something Rockstar has said.</p></div></details>
-    </div>
-    <p class="credit">Images: Rockstar Games</p>
-  </div>
-</section>
-
-<!-- MAP -->
-<section id="map" data-star="1">
-  <div class="wrap">
-    <p class="kicker">Hand-drawn</p>
-    <h2><span class="w">MAP OF</span> <span class="o">LEONIDA</span></h2>
-    <p class="lede">A rough fan sketch of the places Rockstar has named. Not to scale, and not the official map: that one comes free with the game on launch day.</p>
-    <div class="mapbox">
-      <svg viewBox="0 0 600 520" role="img" aria-label="Rough sketch of Leonida with Vice City in the south-east, the Leonida Keys off the southern tip, Grassrivers inland in the south, Ambrosia in the middle, Port Gellhorn in the north-west and Mount Kalaga in the north">
-        <rect width="600" height="520" fill="#176767"/>
-        <g stroke="#2f8585" stroke-width="1"><line x1="0" y1="0" x2="0" y2="520"/><line x1="40" y1="0" x2="40" y2="520"/><line x1="80" y1="0" x2="80" y2="520"/><line x1="120" y1="0" x2="120" y2="520"/><line x1="160" y1="0" x2="160" y2="520"/><line x1="200" y1="0" x2="200" y2="520"/><line x1="240" y1="0" x2="240" y2="520"/><line x1="280" y1="0" x2="280" y2="520"/><line x1="320" y1="0" x2="320" y2="520"/><line x1="360" y1="0" x2="360" y2="520"/><line x1="400" y1="0" x2="400" y2="520"/><line x1="440" y1="0" x2="440" y2="520"/><line x1="480" y1="0" x2="480" y2="520"/><line x1="520" y1="0" x2="520" y2="520"/><line x1="560" y1="0" x2="560" y2="520"/><line x1="0" y1="0" x2="600" y2="0"/><line x1="0" y1="40" x2="600" y2="40"/><line x1="0" y1="80" x2="600" y2="80"/><line x1="0" y1="120" x2="600" y2="120"/><line x1="0" y1="160" x2="600" y2="160"/><line x1="0" y1="200" x2="600" y2="200"/><line x1="0" y1="240" x2="600" y2="240"/><line x1="0" y1="280" x2="600" y2="280"/><line x1="0" y1="320" x2="600" y2="320"/><line x1="0" y1="360" x2="600" y2="360"/><line x1="0" y1="400" x2="600" y2="400"/><line x1="0" y1="440" x2="600" y2="440"/><line x1="0" y1="480" x2="600" y2="480"/></g>
-        <path d="M60 70 L330 60 L360 95 L350 150 L385 215 L410 290 L408 360 L385 420 L350 455 L318 430 L300 360 L265 300 L225 255 L185 190 L160 135 L95 115 Z" fill="#e9d6b2" stroke="#3e2113" stroke-width="5" stroke-linejoin="round"/>
-        <g fill="#e9d6b2" stroke="#3e2113" stroke-width="3"><ellipse cx="335" cy="480" rx="14" ry="6"/><ellipse cx="300" cy="492" rx="12" ry="5"/><ellipse cx="266" cy="500" rx="10" ry="4"/></g>
-        <g font-family="Permanent Marker, cursive" font-size="17" fill="#3e2113">
-          <circle cx="385" cy="390" r="9" fill="#b8322a"/><text x="398" y="378" fill="#fefefb">Vice City</text>
-          <circle cx="300" cy="490" r="8" fill="#b8322a"/><text x="160" y="512" fill="#fefefb">Leonida Keys</text>
-          <circle cx="330" cy="370" r="8" fill="#b8322a"/><text x="236" y="352">Grassrivers</text>
-          <circle cx="300" cy="235" r="8" fill="#b8322a"/><text x="250" y="216">Ambrosia</text>
-          <circle cx="140" cy="100" r="8" fill="#b8322a"/><text x="80" y="160">Port Gellhorn</text>
-          <circle cx="285" cy="95" r="8" fill="#b8322a"/><text x="205" y="44" fill="#fefefb">Mount Kalaga</text>
-        </g>
-        <text x="440" y="60" font-family="Anton, Impact, sans-serif" font-size="36" fill="#fefefb">LEONIDA</text>
-        <text x="442" y="86" font-family="Caveat, cursive" font-size="22" fill="#fbe98c">rough sketch!</text>
-      </svg>
-      <div class="mapnotes">
-        <p><b>Vice City</b>: the big city, GTA 6's take on Miami.</p>
-        <p><b>Leonida Keys</b>: the island chain off the southern tip.</p>
-        <p><b>Grassrivers</b>, <b>Ambrosia</b>, <b>Port Gellhorn</b> and <b>Mount Kalaga</b>: other regions Rockstar has named.</p>
-        <p><a href="https://youtu.be/rxZ47KMNZvg">&#9654; See them in our trailer breakdown</a></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SOCIALS -->
-<section id="follow" data-star="1">
+<section id="follow">
   <div class="wrap">
     <p class="kicker">Pinned to the wall</p>
     <h2><span class="w">FOLLOW THE</span> <span class="o">LOWDOWN</span></h2>
@@ -712,157 +131,45 @@ footer p{color:#b89b7f}
     </div>
   </div>
 </section>
-
-<!-- FUN -->
-<section id="fun" style="background:var(--panel)">
-  <div class="wrap">
-    <p class="kicker">Messing about</p>
-    <h2><span class="w">FUN</span> <span class="o">STUFF</span></h2>
-    <div class="funrow">
-      <div class="fun"><h3>THE FACT MUG</h3><p>One random GTA 6 fact per click.</p><button class="btn orange" type="button" id="mug">Give me a fact</button><div class="factout" id="fact" aria-live="polite">Click the button.</div></div>
-      <div class="fun"><h3>WANTED LEVEL</h3><p>Visit every section to earn all five stars. Your stars sit at the top of the page.</p><p id="starmsg" style="font-family:var(--marker);color:#b25e00"></p></div>
-      <div class="fun"><h3>CHEAT CODE</h3><p>Old-school GTA had cheat codes. So do we. Type <b>LOWDOWN</b> anywhere on this page.</p></div>
-      <div class="fun"><h3>LAMP SWITCH</h3><p>Prefer it darker? Switch the lamp off for the brown theme.</p><button class="btn dark" type="button" id="lamp" aria-pressed="false">Lamp off</button></div>
-    </div>
-  </div>
-</section>
 </main>
+
+<aside class="funrail" id="funrail" aria-label="Fun stuff">
+  <button class="railtab" type="button" aria-expanded="false" aria-controls="funpanel">FUN STUFF</button>
+  <div class="railpanel" id="funpanel">
+    <button class="railclose" type="button" aria-label="Close fun stuff">CLOSE &#10005;</button>
+    <h2><span class="w">FUN</span> <span class="o">STUFF</span></h2>
+    <div class="fun gc-card">
+      <h3>G'S CACHE</h3>
+      <p>Every day a stash is hidden somewhere on this site. Find the little duffel bag and click it to collect.</p>
+      <div class="gcstat" id="gcStatus">Out there somewhere</div>
+      <div class="gchint" id="gcHint"></div>
+      <button class="btn paper" type="button" id="gcWarmer">Warmer</button>
+      <p class="gcsmall"><b id="gcTotal">$0</b> collected. <span id="gcMeta"></span></p>
+      <ul id="gcItems" aria-label="Your latest finds"></ul>
+    </div>
+    <div class="fun"><h3>WANTED LEVEL</h3><p>Visit every page of the site to earn all five stars. Your stars sit at the top of the page.</p><p id="starmsg" style="font-family:var(--marker);color:#b25e00"></p></div>
+    <div class="fun"><h3>THE FACT MUG</h3><p>One random GTA 6 fact per click.</p><button class="btn orange" type="button" id="mug">Give me a fact</button><div class="factout" id="fact" aria-live="polite">Click the button.</div></div>
+    <div class="fun"><h3>CHEAT CODE</h3><p>Old-school GTA had cheat codes. So do we. Type <b>LOWDOWN</b> on any page.</p></div>
+    <div class="fun"><h3>LAMP SWITCH</h3><p>Prefer it darker? Switch the lamp off for the brown theme.</p><button class="btn dark" type="button" id="lamp" aria-pressed="false">Lamp off</button></div>
+  </div>
+</aside>
+<div class="gcfound" id="gcFound" role="dialog" aria-label="G's Cache found" hidden>
+  <h3>G'S CACHE FOUND!</h3>
+  <div class="amt">$0</div>
+  <p class="gcitem"></p>
+  <button class="btn orange" type="button">Nice</button>
+</div>
 
 <footer>
   <div class="wrap">
     <img src="img/logo.png" alt="GTA 6 Lowdown">
     <p><b style="color:var(--white)">GTA 6 Lowdown</b>. Get the lowdown.</p>
+    <p class="soc"><a href="https://www.youtube.com/@GTA6Lowdown">YouTube</a><a href="https://x.com/GTA6LWDWN">X</a><a href="https://www.instagram.com/gta6lwdwn/">Instagram</a><a href="https://www.pinterest.com/GTA6LWDWN/">Pinterest</a></p>
     <p>Unofficial fan site. Not affiliated with, endorsed by or connected to Rockstar Games or Take-Two Interactive. Rockstar Games, Grand Theft Auto, GTA and their logos are trademarks of Take-Two Interactive Software. News is written in our own words and links to its source.</p>
     <p>Images: Rockstar Games. Official screenshots and artwork, used for news and commentary.</p>
   </div>
 </footer>
 <div class="toast" id="toast" role="status" hidden></div>
-
-<script>
-(function(){
-  var $=function(s){return document.querySelector(s)};
-  function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
-  function toast(t){var el=$('#toast');el.textContent=t;el.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(function(){el.hidden=true},2600)}
-
-  // nav toggle
-  var tg=$('.navtoggle'),nl=$('#navlist');
-  tg.addEventListener('click',function(){var o=nl.classList.toggle('open');tg.setAttribute('aria-expanded',o)});
-  nl.addEventListener('click',function(e){if(e.target.tagName==='A'){nl.classList.remove('open');tg.setAttribute('aria-expanded','false')}});
-
-  // countdown to midnight local, 19 Nov 2026
-  var target=new Date(2026,10,19,0,0,0);
-  function pad(n){return n<10?'0'+n:''+n}
-  function tick(){
-    var ms=target-new Date();
-    if(ms<=0){$('#cd').innerHTML='<div style="grid-column:1/-1"><b>IT\'S OUT!</b></div>';$('#cd-note').textContent='GTA 6 is out now on PS5 and Xbox Series X|S.';return}
-    var s=Math.floor(ms/1000);
-    $('#cd-d').textContent=Math.floor(s/86400);$('#cd-h').textContent=pad(Math.floor(s%86400/3600));
-    $('#cd-m').textContent=pad(Math.floor(s%3600/60));$('#cd-s').textContent=pad(s%60);
-    setTimeout(tick,1000);
-  }
-  tick();
-
-  // video filters
-  var fbtns=document.querySelectorAll('.filters button');
-  fbtns.forEach(function(b){b.addEventListener('click',function(){
-    fbtns.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
-    var f=b.dataset.f;
-    document.querySelectorAll('#vgrid .vcard').forEach(function(c){c.hidden=!(f==='all'||c.dataset.cat===f)});
-  })});
-
-  // wanted stars: visit sections
-  var STAR='<svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,2 15,9 22,9.5 16.5,14 18.5,21 12,17 5.5,21 7.5,14 2,9.5 9,9" fill="F" stroke="#fefefb" stroke-width="1.5"/></svg>';
-  var seen={};try{seen=JSON.parse(store('lowdown-seen')||'{}')}catch(e){}
-  var secs=[].slice.call(document.querySelectorAll('[data-star]'));
-  function stars(){
-    var n=Math.min(5,Math.floor(Object.keys(seen).length*5/secs.length));
-    var h='';for(var i=0;i<5;i++)h+=STAR.replace('F',i<n?'#ef9706':'none');
-    $('#stars').innerHTML=h;$('#herostars').innerHTML=h;$('#stars').setAttribute('aria-label','Wanted level: '+n+' of 5 stars');
-    $('#starmsg').textContent=n>=5?'Five stars. You\'ve seen everything.':'Stars so far: '+n+' of 5';
-    return n;
-  }
-  var last=stars();
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){
-      if(e.isIntersecting&&!seen[e.target.id]){seen[e.target.id]=1;store('lowdown-seen',JSON.stringify(seen));var n=stars();if(n>last){toast(n>=5?'5 stars! Most wanted.':'Wanted level up: '+n+' stars');last=n}}
-    })},{threshold:.35});
-    secs.forEach(function(s){io.observe(s)});
-  }
-
-  // quiz
-  var Q=[
-    ['GTA 6 comes out on 19 November 2026.',true,'Confirmed by Rockstar: midnight local time on PS5 and Xbox Series X|S.'],
-    ['GTA 6 is out on PC on launch day.',false,'No PC version has been announced. An early-2027 date is still a rumor.'],
-    ['The game needs up to 212GB of space.',true,'From Rockstar\'s preload information.'],
-    ['Lucia was released from prison on parole.',false,'Rockstar\'s profile says luck got her out, not parole.'],
-    ['Justice wrote the GTA 6 score.',true,'Confirmed. The score album, Grand Theft Auto VI: Original Score, comes out on 11 December 2026.'],
-    ['Daft Punk confirmed they turned GTA 6 down.',false,'That story comes from one X post, and it never actually says no.'],
-    ['You can listen to the radio on foot.',true,'Rockstar says radio plays through headphones on Jason\'s or Lucia\'s phone.'],
-    ['GTA 6 Online is confirmed for launch day.',false,'Rockstar hasn\'t said. Still a rumor.']
-  ];
-  var qi=0,score=0,order=[];
-  function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
-  function ask(){
-    var qa=$('#qa');$('#qf').textContent='';
-    if(qi>=order.length){$('#qq').textContent='You got '+score+' out of '+order.length+'.';$('#qf').textContent=score===order.length?'Perfect. You really do have the lowdown.':'Watch video #1 to brush up on what\'s real.';qa.innerHTML='<button class="btn orange" type="button" id="qstart">PLAY AGAIN</button>';$('#qstart').onclick=start;return}
-    var q=Q[order[qi]];$('#qq').textContent='"'+q[0]+'"';
-    qa.innerHTML='<button class="btn teal" type="button" data-a="1">CONFIRMED</button><button class="btn orange" type="button" data-a="0">RUMOR</button>';
-    qa.querySelectorAll('button').forEach(function(b){b.onclick=function(){
-      var right=(b.dataset.a==='1')===q[1];if(right)score++;
-      $('#qf').textContent=(right?'Correct! ':'Nope. ')+q[2];
-      $('#qs').textContent='Score: '+score+' / '+(qi+1);
-      qa.innerHTML='<button class="btn paper" type="button" id="qnext">NEXT</button>';$('#qnext').onclick=function(){qi++;ask()};$('#qnext').focus();
-    }});
-  }
-  function start(){order=shuffle(Q.map(function(_,i){return i}));qi=0;score=0;$('#qs').textContent='';ask()}
-  $('#qstart').onclick=start;
-
-  // which lead quiz
-  var LQ=[
-    ['The job goes wrong. You...',['Talk your way out','Fight your way out']],
-    ['Pick a ride for the getaway.',['Something fast and loud','Something nobody will notice']],
-    ['Your perfect night in Vice City?',['A quiet drive along the coast','The busiest club in town']],
-    ['What matters most?',['Family, always','Freedom, whatever it takes']]
-  ];
-  var LW=[[ 'J','L'],['L','J'],['J','L'],['L','J']];
-  var li=0,tally={J:0,L:0};
-  function lask(){
-    var la=$('#la');
-    if(li>=LQ.length){var r=tally.L>tally.J?'L':(tally.J>tally.L?'J':(Math.random()<.5?'J':'L'));
-      $('#lq').textContent=r==='L'?"You're a Lucia.":"You're a Jason.";
-      $('#lf').textContent=r==='L'?'Bold, loyal to your people, and nobody\'s fool.':'Cool head, quick hands, and always one step ahead.';
-      la.innerHTML='<button class="btn orange" type="button" id="lstart">PLAY AGAIN</button>';$('#lstart').onclick=lstart;return}
-    $('#lq').textContent=LQ[li][0];$('#lf').textContent='Question '+(li+1)+' of '+LQ.length;
-    la.innerHTML=LQ[li][1].map(function(a,k){return '<button class="btn '+(k?'teal':'paper')+'" type="button" data-k="'+k+'">'+a+'</button>'}).join('');
-    la.querySelectorAll('button').forEach(function(b){b.onclick=function(){tally[LW[li][+b.dataset.k]]++;li++;lask()}});
-  }
-  function lstart(){li=0;tally={J:0,L:0};lask()}
-  $('#lstart').onclick=lstart;
-
-  // copy cheat numbers
-  document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
-    var t=b.dataset.c;
-    try{navigator.clipboard.writeText(t).then(function(){toast('Copied '+t)},function(){toast('Dial '+t)})}catch(e){toast('Dial '+t)}
-  })});
-
-  // fact mug
-  var F=['GTA 6 is set in the state of Leonida, home to Vice City.','Preload for GTA 6 opened on 10 November 2026.','There\'s a free digital map of Leonida on launch day.','Six GTA 6 radio stations were confirmed before launch.','The Launch Trailer song is "Flower in a Hurricane" by Justice.','Grand Theft Auto VI: The Album has 34 original tracks.','In GTA 6, Rockstar says police track your outfit and your car.','GTA 6 has a Criminal Profile that remembers how you play.'];
-  var fi=-1;$('#mug').addEventListener('click',function(){var n;do{n=Math.floor(Math.random()*F.length)}while(n===fi&&F.length>1);fi=n;$('#fact').textContent=F[n]});
-
-  // lamp theme
-  var lamp=$('#lamp');
-  function setTheme(t){document.documentElement.setAttribute('data-theme',t);lamp.setAttribute('aria-pressed',t==='dark');lamp.textContent=t==='dark'?'Lamp on':'Lamp off';store('lowdown-theme',t)}
-  if(store('lowdown-theme')==='dark')setTheme('dark');
-  lamp.addEventListener('click',function(){setTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark')});
-
-  // cheat code
-  var buf='';document.addEventListener('keydown',function(e){
-    if(e.target.closest&&e.target.closest('input,textarea'))return;
-    if(!e.key||e.key.length!==1)return;
-    buf=(buf+e.key.toUpperCase()).slice(-7);
-    if(buf==='LOWDOWN'){secs.forEach(function(s){seen[s.id]=1});store('lowdown-seen',JSON.stringify(seen));last=stars();toast('CHEAT ACTIVATED: max wanted level');buf=''}
-  });
-})();
-</script>
+<script src="js/site.js"></script>
 </body>
 </html>
