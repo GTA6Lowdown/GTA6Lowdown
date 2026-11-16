@@ -3,13 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta name="theme-color" content="#3e2113">
 <title>GTA 6 Lowdown: GTA 6 news, facts and videos</title>
 <meta name="description" content="GTA 6 Lowdown: what Rockstar has actually confirmed about GTA 6, what's still rumor, every video from the channel, quizzes and the older GTA games explained. Unofficial fan site.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;700&family=Caveat:wght@600&family=Permanent+Marker&display=swap">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"GTA 6 Lowdown","url":"[SITE URL]","logo":"[SITE URL]/img/logo.png","description":"Unofficial GTA 6 fan channel: what's confirmed, what's rumor, and the older games explained.","sameAs":["https://www.youtube.com/@GTA6Lowdown","https://x.com/GTA6LWDWN","https://www.pinterest.com/GTA6LWDWN/"]}
+{"@context":"https://schema.org","@type":"Organization","name":"GTA 6 Lowdown","url":"https://gta6lowdown.github.io/GTA6Lowdown","logo":"https://gta6lowdown.github.io/GTA6Lowdown/img/logo.png","description":"Unofficial GTA 6 fan channel: what's confirmed, what's rumor, and the older games explained.","sameAs":["https://www.youtube.com/@GTA6Lowdown","https://x.com/GTA6LWDWN","https://www.instagram.com/gta6lwdwn/","https://www.pinterest.com/GTA6LWDWN/"]}
 </script>
 <style>
 :root{
@@ -252,11 +257,11 @@ section.band-or .credit{color:var(--brown)}
   --r:18px;
 }
 /* soft colour blobs so the glass has something to bend */
-body{background:
+body{background:var(--ground)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:
   radial-gradient(900px 600px at 8% 12%,rgba(226,130,2,.10),transparent 60%),
   radial-gradient(800px 600px at 92% 38%,rgba(23,103,103,.08),transparent 60%),
-  radial-gradient(900px 700px at 20% 78%,rgba(226,130,2,.08),transparent 60%),
-  var(--ground);background-attachment:fixed}
+  radial-gradient(900px 700px at 20% 78%,rgba(226,130,2,.08),transparent 60%)}
 section[style*="--panel"]{background:linear-gradient(180deg,rgba(243,230,204,.85),rgba(243,230,204,.6))!important}
 
 /* header: frosted brown */
@@ -348,6 +353,21 @@ header.top{background:rgba(62,33,19,.72);-webkit-backdrop-filter:var(--blur);bac
 .fun::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--teal)}
 .factout{border-radius:12px}
 
+/* instagram reels */
+.reels{gap:20px}
+.reel{flex:0 0 328px;height:620px;border-radius:22px;overflow:hidden;scroll-snap-align:start;background:var(--glass);border:var(--glass-edge);box-shadow:var(--glass-shadow);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);padding:6px}
+.reel iframe{display:block;width:100%;height:100%;border:0;border-radius:16px;background:#fff}
+@media (max-width:420px){.reel{flex-basis:calc(100vw - 52px);height:580px}}
+
+/* articles */
+.artgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px;margin-top:28px}
+.acard{display:block;text-decoration:none;color:var(--brown);background:var(--glass);border:var(--glass-edge);box-shadow:var(--glass-shadow);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);border-radius:var(--r);overflow:hidden;transition:transform .15s,box-shadow .15s}
+.acard:hover,.acard:focus-visible{transform:translateY(-5px);box-shadow:0 18px 40px rgba(62,33,19,.22),inset 0 1px 0 rgba(255,255,255,.9)}
+.acard img{display:block;width:calc(100% - 16px);margin:8px 8px 0;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.acard .ameta{padding:14px 16px 18px}
+.acard h3{font-size:22px;line-height:1.15}
+.acard p{margin:8px 0 0;font-size:14px;color:#6b4a32}
+
 /* toast */
 .toast{background:rgba(251,233,140,.75);border:var(--glass-edge);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);box-shadow:var(--glass-shadow);border-radius:999px}
 
@@ -378,6 +398,7 @@ footer p{color:#b89b7f}
     <button class="navtoggle" type="button" aria-expanded="false" aria-controls="navlist">MENU</button>
     <ul id="navlist">
       <li><a href="#videos">Videos</a></li>
+      <li><a href="#articles">Articles</a></li>
       <li><a href="#news">News</a></li>
       <li><a href="#shorts">Shorts</a></li>
       <li><a href="#tips">Tips</a></li>
@@ -435,7 +456,7 @@ footer p{color:#b89b7f}
       </a>
       <div>
         <span class="chip mu">MUSIC</span>
-        <h3 style="font-size:34px">GTA 6: The Festival. Who's actually playing in Miami? <span style="color:var(--muted);font-size:16px">[CHECK LIVE TITLE]</span></h3>
+        <h3 style="font-size:34px">GTA 6 Music Festival: Who Is Actually Playing in Miami?</h3>
         <p class="lede">Rockstar and PlayStation's festival in Miami on Saturday 21 November: the full lineup, and what it might tell us about the in-game radio.</p>
         <div class="btns" style="margin-top:18px"><a class="btn orange" href="https://youtu.be/Kj4f632x-ns">&#9654; Watch now</a></div>
       </div>
@@ -457,17 +478,33 @@ footer p{color:#b89b7f}
       <button type="button" aria-pressed="false" data-f="ch">Characters and old games</button>
     </div>
     <div class="grid" id="vgrid">
-      <a class="vcard" data-cat="mu" href="https://youtu.be/Kj4f632x-ns"><div class="thumb"><img class="fbimg" src="img/latest_vice-city-marina.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/Kj4f632x-ns/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#10</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip mu">MUSIC</span><h3>GTA 6: The Festival. Who's actually playing in Miami?</h3><p>The Miami festival lineup, act by act.</p></div></a>
+      <a class="vcard" data-cat="mu" href="https://youtu.be/Kj4f632x-ns"><div class="thumb"><img class="fbimg" src="img/latest_vice-city-marina.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/Kj4f632x-ns/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#10</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip mu">MUSIC</span><h3>GTA 6 Music Festival: Who Is Actually Playing in Miami?</h3><p>The Miami festival lineup, act by act.</p></div></a>
       <a class="vcard" data-cat="ch" href="https://youtu.be/7PDU2oVunqg"><div class="thumb"><img class="fbimg" src="img/case_gta5_v02.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/7PDU2oVunqg/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#8</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip ch">OLD GAMES</span><h3>Trevor Almost DIDN'T EXIST! The Real Backstory of GTA 5 Michael, Franklin, Trevor</h3><p>GTA 5's three leads, as one story.</p></div></a>
-      <a class="vcard" data-cat="ex" href="https://youtu.be/iCxqjwv9jDw"><div class="thumb"><img class="fbimg" src="img/news_leonida-keys.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/iCxqjwv9jDw/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#7</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip ex">EXPLAINED</span><h3>GTA 6 Preload Moved Up! EVERYTHING You need to know</h3><p>Preload, storage, unlock time and the free map.</p></div></a>
-      <a class="vcard" data-cat="ex" href="https://youtu.be/28PWSG1GZi4"><div class="thumb"><img class="fbimg" src="img/tip_ambrosia-bikers.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/28PWSG1GZi4/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#6</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip ex">EXPLAINED</span><h3>Almost Everything I Did in GTA 5 Will Get Me Caught in GTA 6</h3><p>Police, Heat, guns and the Criminal Profile.</p></div></a>
+      <a class="vcard" data-cat="ex" href="https://youtu.be/iCxqjwv9jDw"><div class="thumb"><img class="fbimg" src="img/news_leonida-keys.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/iCxqjwv9jDw/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#7</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip ex">EXPLAINED</span><h3>Don't Preload GTA 6 Until You Check This PS5 Setting!</h3><p>Preload, storage, unlock time and the free map.</p></div></a>
+      <a class="vcard" data-cat="ex" href="https://youtu.be/28PWSG1GZi4"><div class="thumb"><img class="fbimg" src="img/tip_ambrosia-bikers.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/28PWSG1GZi4/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#6</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip ex">EXPLAINED</span><h3>Why Old GTA 5 Tactics Are Useless Against GTA 6 Cops</h3><p>Police, Heat, guns and the Criminal Profile.</p></div></a>
       <a class="vcard" data-cat="mu" href="https://youtu.be/BPeLsFWrLpA"><div class="thumb"><img class="fbimg" src="img/news_vice-city-postcard.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/BPeLsFWrLpA/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#5</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip mu">MUSIC</span><h3>Did Daft Punk Really Say No to GTA 6?</h3><p>One X post, and what's actually confirmed.</p></div></a>
-      <a class="vcard" data-cat="ex" href="https://youtu.be/rxZ47KMNZvg"><div class="thumb"><img class="fbimg" src="img/news_vice-city-sign.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/rxZ47KMNZvg/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#4</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip ex">EXPLAINED</span><h3>We Analyzed the ENTIRE GTA 6 Launch Trailer So You Don't Have To</h3><p>Every scene, and the song.</p></div></a>
+      <a class="vcard" data-cat="ex" href="https://youtu.be/rxZ47KMNZvg"><div class="thumb"><img class="fbimg" src="img/news_vice-city-sign.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/rxZ47KMNZvg/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#4</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip ex">EXPLAINED</span><h3>Tiny Details in the GTA 6 Trailer Most People Missed</h3><p>Every scene, and the song.</p></div></a>
       <a class="vcard" data-cat="mu" href="https://youtu.be/TuJw-DFh1vE"><div class="thumb"><img class="fbimg" src="img/tip_lucia-car.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/TuJw-DFh1vE/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#3</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip mu">MUSIC</span><h3>GTA 6 Radio Stations Revealed: Hosts, Songs and What's Still Unknown</h3><p>The six stations confirmed so far.</p></div></a>
       <a class="vcard" data-cat="ch" href="https://youtu.be/UJiPz06IUT4"><div class="thumb"><img class="fbimg" src="img/hero_jason-lucia.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/UJiPz06IUT4/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#2</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip ch">CHARACTERS</span><h3>Who Is Lucia Caminos? What Rockstar Actually Confirmed (GTA 6)</h3><p>Her story, from Rockstar's own profile.</p></div></a>
       <a class="vcard" data-cat="ex" href="https://youtu.be/b5Z45qWy9F4"><div class="thumb"><img class="fbimg" src="img/info_robbery-art.jpg" alt="" loading="lazy"><img class="yt" src="https://i.ytimg.com/vi/b5Z45qWy9F4/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="fb">#1</span><span class="play">&#9654; YOUTUBE</span></div><div class="meta"><span class="chip ex">EXPLAINED</span><h3>What Is ACTUALLY Confirmed for GTA 6? (Release Date &amp; More)</h3><p>Confirmed vs rumor, sorted.</p></div></a>
     </div>
     <p style="margin-top:22px"><span class="note">Coming soon: #9, the San Andreas characters</span></p>
+    <p class="credit">Images: Rockstar Games</p>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section id="articles" data-star="1" style="background:var(--panel)">
+  <div class="wrap">
+    <p class="kicker">Read the lowdown</p>
+    <h2><span class="w">THE</span> <span class="o">GUIDES</span></h2>
+    <p class="lede">Long reads with the full detail, every source listed at the bottom.</p>
+    <div class="artgrid">
+      <a class="acard" href="articles/everything-confirmed.html"><img src="img/info_robbery-art.jpg" alt="" loading="lazy"><div class="ameta"><span class="chip ex">GUIDE</span><h3>GTA 6: everything we know</h3><p>Release date, platforms, editions, story, map and what hasn't been announced.</p></div></a>
+      <a class="acard" href="articles/launch-day-guide.html"><img src="img/news_vice-city-sign.jpg" alt="" loading="lazy"><div class="ameta"><span class="chip ex">GUIDE</span><h3>GTA 6 launch day guide</h3><p>Unlock times, pre-load, storage, prices, the free map and a launch-night checklist.</p></div></a>
+      <a class="acard" href="articles/music-and-radio.html"><img src="img/latest_vice-city-marina.jpg" alt="" loading="lazy"><div class="ameta"><span class="chip mu">MUSIC</span><h3>GTA 6 music and radio guide</h3><p>Every station and host, the album, the Justice score and the Miami festival.</p></div></a>
+      <a class="acard" href="articles/leonida-places-and-people.html"><img src="img/news_leonida-keys.jpg" alt="" loading="lazy"><div class="ameta"><span class="chip ch">PLACES</span><h3>Leonida: the places and people of GTA 6</h3><p>Six regions, the real Florida they echo, and everyone around Jason and Lucia.</p></div></a>
+    </div>
     <p class="credit">Images: Rockstar Games</p>
   </div>
 </section>
@@ -480,9 +517,9 @@ footer p{color:#b89b7f}
     <p class="lede">Every item says whether it's CONFIRMED by Rockstar or still a RUMOR, with the source.</p>
     <div class="cork">
       <article class="clip"><span class="stamp yes">CONFIRMED</span><time datetime="2026-11-19">Launch: 19 Nov 2026</time><img class="pic" src="img/news_vice-city-sign.jpg" alt="The Vice City sign at sunset, with a plane overhead" loading="lazy"><h3>GTA 6 unlocks at midnight local time</h3><p>On PS5 and Xbox Series X|S. Rockstar is also giving a free digital map of Leonida on launch day.</p><a class="src" href="https://www.rockstargames.com/newswire">Source: Rockstar Newswire</a></article>
-      <article class="clip"><span class="stamp yes">CONFIRMED</span><time datetime="2026-11-10">10 Nov 2026</time><img class="pic" src="img/news_leonida-keys.jpg" alt="A seaplane over the Leonida Keys" loading="lazy"><h3>Preload is open</h3><p>Up to 212GB of space needed. PS5 opened at midnight local, Xbox at 12 a.m. GMT.</p><a class="src" href="https://www.rockstargames.com/newswire">Source: Rockstar Newswire</a></article>
-      <article class="clip"><span class="stamp yes">CONFIRMED</span><time datetime="2026-11-21">Sat 21 Nov 2026</time><img class="pic" src="img/news_vice-city-postcard.jpg" alt="Official Vice City postcard artwork" loading="lazy"><h3>GTA 6: The Festival, Miami</h3><p>Rockstar and PlayStation's festival at Mana Wynwood, two days after launch. Two stages of artists from the game and the album.</p><a class="src" href="https://www.rockstargames.com/VI/gtavi-thefestival">Source: Rockstar</a></article>
-      <article class="clip"><span class="stamp yes">CONFIRMED</span><time datetime="2026-11-19">Out 19 Nov 2026</time><h3>Grand Theft Auto VI: The Album</h3><p>34 original tracks with Atlantic Records. Justice are writing the game's score.</p><a class="src" href="https://www.rockstargames.com/newswire">Source: Rockstar Newswire</a></article>
+      <article class="clip"><span class="stamp yes">CONFIRMED</span><time datetime="2026-11-10">10 Nov 2026</time><img class="pic" src="img/news_leonida-keys.jpg" alt="A seaplane over the Leonida Keys" loading="lazy"><h3>Preload is open</h3><p>The pre-load needs up to 212GB, depending on your console. PS5 opened at midnight local, Xbox at 12 a.m. GMT.</p><a class="src" href="https://www.rockstargames.com/newswire">Source: Rockstar Newswire</a></article>
+      <article class="clip"><span class="stamp yes">CONFIRMED</span><time datetime="2026-11-21">Sat 21 Nov 2026</time><img class="pic" src="img/news_vice-city-postcard.jpg" alt="Official Vice City postcard artwork" loading="lazy"><h3>GTA 6: The Festival, Miami</h3><p>Rockstar and PlayStation's festival at Mana Wynwood, two days after launch. Two stages of artists from the game and the album. Tickets were by lottery, which closed on 10 November.</p><a class="src" href="https://www.rockstargames.com/VI/gtavi-thefestival">Source: Rockstar</a></article>
+      <article class="clip"><span class="stamp yes">CONFIRMED</span><time datetime="2026-11-19">Out 19 Nov 2026</time><h3>Grand Theft Auto VI: The Album</h3><p>34 original tracks with Atlantic Records. Justice's score album, Grand Theft Auto VI: Original Score, follows on 11 December.</p><a class="src" href="https://www.rockstargames.com/newswire">Source: Rockstar Newswire</a></article>
       <article class="clip"><span class="stamp no">RUMOR</span><time>Still unconfirmed</time><h3>PC version in early 2027?</h3><p>Talked about everywhere, but Rockstar hasn't given a PC date.</p><a class="src" href="https://youtu.be/b5Z45qWy9F4">Our breakdown: video #1</a></article>
       <article class="clip"><span class="stamp no">RUMOR</span><time>Still unconfirmed</time><h3>GTA 6 Online at launch?</h3><p>No word from Rockstar on online play at launch yet.</p><a class="src" href="https://youtu.be/b5Z45qWy9F4">Our breakdown: video #1</a></article>
       <article class="clip sticky"><p>We only stamp something CONFIRMED when Rockstar says it. Spotted a rumor? Tell us in the comments!</p></article>
@@ -496,15 +533,23 @@ footer p{color:#b89b7f}
   <div class="wrap">
     <p class="kicker">Quick hits</p>
     <h2><span class="w">THE</span> <span class="o">SHORTS</span></h2>
-    <p class="lede">Bite-size GTA 6 facts in under a minute.</p>
-    <div class="phones" tabindex="0" aria-label="Shorts, scroll sideways">
-      <div class="phone"><div class="scr"><span>Coming soon</span><b>Preload moved. Launch didn't.</b></div></div>
-      <div class="phone"><div class="scr"><span>Coming soon</span><b>Change your outfit, lose the cops</b></div></div>
-      <div class="phone"><div class="scr"><span>Coming soon</span><b>Six radio stations so far</b></div></div>
-      <div class="phone"><div class="scr"><span>Coming soon</span><b>Lucia wasn't paroled</b></div></div>
-      <div class="phone"><div class="scr"><span>Coming soon</span><b>Who's playing the festival?</b></div></div>
+    <p class="lede">Bite-size GTA 6 clips in under a minute. Press play right here, or scroll sideways for more.</p>
+    <div class="phones reels" tabindex="0" aria-label="Instagram clips, scroll sideways">
+      <div class="reel"><iframe src="https://www.instagram.com/reel/DfyVwRbJ1ir/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (1)" scrolling="no" allowfullscreen></iframe></div>
+      <div class="reel"><iframe src="https://www.instagram.com/reel/DfyIGh1J8KU/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (2)" scrolling="no" allowfullscreen></iframe></div>
+      <div class="reel"><iframe src="https://www.instagram.com/reel/Dfx9z_0J77I/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (3)" scrolling="no" allowfullscreen></iframe></div>
+      <div class="reel"><iframe src="https://www.instagram.com/reel/Dfxsm4AJCZa/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (4)" scrolling="no" allowfullscreen></iframe></div>
+      <div class="reel"><iframe src="https://www.instagram.com/reel/Dfxe3EjJo2N/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (5)" scrolling="no" allowfullscreen></iframe></div>
+      <div class="reel"><iframe src="https://www.instagram.com/reel/DfxRKqgphYN/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (6)" scrolling="no" allowfullscreen></iframe></div>
+      <div class="reel"><iframe src="https://www.instagram.com/reel/DfvxA_Fp5kK/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (7)" scrolling="no" allowfullscreen></iframe></div>
+      <div class="reel"><iframe src="https://www.instagram.com/reel/DfvjQcTp98P/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (8)" scrolling="no" allowfullscreen></iframe></div>
+      <div class="reel"><iframe src="https://www.instagram.com/reel/DfvZCASprAD/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (9)" scrolling="no" allowfullscreen></iframe></div>
+      <div class="reel"><iframe src="https://www.instagram.com/reel/DfvH2kcp0CU/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (10)" scrolling="no" allowfullscreen></iframe></div>
+      <div class="reel"><iframe src="https://www.instagram.com/reel/Dfu6F_6pdAJ/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (11)" scrolling="no" allowfullscreen></iframe></div>
+      <div class="reel"><iframe src="https://www.instagram.com/reel/DfusZTjpvOD/embed" loading="lazy" title="GTA 6 Lowdown clip on Instagram (12)" scrolling="no" allowfullscreen></iframe></div>
     </div>
-    <a class="btn orange" href="https://www.youtube.com/@GTA6Lowdown/shorts">&#9654; See the Shorts on YouTube</a>
+    <p class="credit">Clips play from Instagram, which may set its own cookies.</p>
+    <a class="btn orange" href="https://www.instagram.com/gta6lwdwn/">&#9654; See all the clips on Instagram</a>
   </div>
 </section>
 
@@ -516,10 +561,10 @@ footer p{color:#b89b7f}
     <p class="lede">What Rockstar has told us about how GTA 6 plays, and what it means for your GTA 5 habits. More tips once the game is out.</p>
     <div class="tipgrid">
       <article class="tip"><img class="pic" src="img/tip_ambrosia-bikers.jpg" alt="A biker gang riding through Ambrosia" loading="lazy"><span class="tn">01</span><h3>Change your outfit to lose the cops</h3><p>Police track your outfit and your car. Buying and wearing a new outfit removes your Heat, and switching cars or splitting up Jason and Lucia helps too.</p><p class="src">Rockstar's Rob Nelson, via TGG</p></article>
-      <article class="tip"><img class="pic top" src="img/tip_jason-pistols.jpg" alt="Jason Duval aiming two pistols" loading="lazy"><span class="tn">02</span><h3>You can't carry the whole gun shop</h3><p>Two concealed handguns and two long guns, with only one long gun on your back. Everything else you've bought stays in your personal vehicle.</p><p class="src">Rockstar's Rob Nelson, via TGG</p></article>
+      <article class="tip"><img class="pic top" src="img/tip_jason-pistols.jpg" alt="Jason Duval aiming two pistols" loading="lazy"><span class="tn">02</span><h3>You can't carry the whole gun shop</h3><p>Rockstar's Rob Nelson says you can't hide a whole arsenal on you any more. Long guns go in your vehicle's trunk or an Ammu-Nation locker. Previews mention two handguns and two long guns on you, but Rockstar hasn't given exact numbers.</p><p class="src">Rob Nelson (Rockstar North) interviews; previews</p></article>
       <article class="tip"><img class="pic top" src="img/tip_vault.jpg" alt="Jason and Lucia in a bank vault" loading="lazy"><span class="tn">03</span><h3>The game remembers how you play</h3><p>Your Criminal Profile tracks consistent behaviour, which Rockstar says may affect how the world reacts to you and how the story plays out. There's no right or wrong way to play.</p><p class="src">Rockstar</p></article>
       <article class="tip"><img class="pic top" src="img/tip_lucia-car.jpg" alt="Lucia sitting on her car at a Vice City car meet" loading="lazy"><span class="tn">04</span><h3>Take the radio with you</h3><p>Radio and on-demand podcasts play on foot, through headphones on Jason's or Lucia's phone.</p><p class="src">Rockstar</p></article>
-      <article class="tip"><span class="tn">05</span><h3>Launch night checklist</h3><p>Preload done, up to 212GB free, and it unlocks at midnight your local time. Grab the free digital map of Leonida on launch day.</p><p class="src">Rockstar Newswire</p></article>
+      <article class="tip"><span class="tn">05</span><h3>Launch night checklist</h3><p>Pre-load done (up to 212GB, depending on your console), and it unlocks at midnight your local time. Grab the free printable Leonida map from Rockstar's GTA VI site on launch day. <a href="articles/launch-day-guide.html">Full launch day guide</a></p><p class="src">Rockstar Newswire</p></article>
       <article class="tip sticky"><p>Full breakdowns:</p><p><a href="https://youtu.be/28PWSG1GZi4">&#9654; GTA 5 habits that won't work</a></p><p><a href="https://youtu.be/iCxqjwv9jDw">&#9654; The launch guide</a></p></article>
     </div>
     <p class="credit">Images: Rockstar Games</p>
@@ -614,7 +659,7 @@ footer p{color:#b89b7f}
       <details open><summary>When does GTA 6 come out?</summary><div class="ans"><p>19 November 2026, at midnight local time, on PS5 and Xbox Series X|S. Preload opened on 10 November.</p></div></details>
       <details><summary>Who are the main characters?</summary><div class="ans"><p>Two leads: Jason Duval and Lucia Caminos. Rockstar says an easy score goes wrong and the pair end up in a criminal conspiracy across Leonida.</p><p><a href="https://youtu.be/UJiPz06IUT4">Watch: who is Lucia Caminos?</a></p></div></details>
       <details><summary>Where is GTA 6 set?</summary><div class="ans"><p>The state of Leonida, including Vice City and the Leonida Keys.</p></div></details>
-      <details><summary>How much space does it need?</summary><div class="ans"><p>Up to 212GB, according to Rockstar's preload information.</p><p><a href="https://youtu.be/iCxqjwv9jDw">Watch: the launch guide</a></p></div></details>
+      <details><summary>How much space does it need?</summary><div class="ans"><p>Rockstar says the pre-load needs up to 212GB, depending on your console. That's an upper limit, not an exact install size.</p><p><a href="https://youtu.be/iCxqjwv9jDw">Watch: the launch guide</a></p></div></details>
       <details><summary>Which radio stations are confirmed?</summary><div class="ans"><p>Six so far: Cocoteo, Back Country, Afro Bank FM, The Chamber 106.6, Flash FM and Dirty South Classics. You can also listen on foot, through headphones on your phone in the game.</p><p><a href="https://youtu.be/TuJw-DFh1vE">Watch: the radio stations</a></p></div></details>
       <details><summary>Is there a PC version?</summary><div class="ans"><p>Not announced. An early-2027 PC date is a rumor, not something Rockstar has said.</p></div></details>
     </div>
@@ -663,9 +708,7 @@ footer p{color:#b89b7f}
     <div class="cards">
       <a class="post p1" href="https://www.youtube.com/@GTA6Lowdown"><b>YOUTUBE</b><span>@GTA6Lowdown</span></a>
       <a class="post p2" href="https://x.com/GTA6LWDWN"><b>X</b><span>@GTA6LWDWN</span></a>
-      <a class="post p3" href="#follow"><b>INSTAGRAM</b><span>[ADD LINK]</span></a>
-      <a class="post p4" href="#follow"><b>FACEBOOK</b><span>[ADD LINK]</span></a>
-      <a class="post p5" href="https://www.pinterest.com/GTA6LWDWN/"><b>PINTEREST</b><span>GTA6LWDWN</span></a>
+      <a class="post p3" href="https://www.instagram.com/gta6lwdwn/"><b>INSTAGRAM</b><span>@gta6lwdwn</span></a>      <a class="post p5" href="https://www.pinterest.com/GTA6LWDWN/"><b>PINTEREST</b><span>GTA6LWDWN</span></a>
     </div>
   </div>
 </section>
@@ -752,7 +795,7 @@ footer p{color:#b89b7f}
     ['GTA 6 is out on PC on launch day.',false,'No PC version has been announced. An early-2027 date is still a rumor.'],
     ['The game needs up to 212GB of space.',true,'From Rockstar\'s preload information.'],
     ['Lucia was released from prison on parole.',false,'Rockstar\'s profile says luck got her out, not parole.'],
-    ['Justice are writing the GTA 6 score.',true,'Rockstar confirmed Justice as the score composers.'],
+    ['Justice wrote the GTA 6 score.',true,'Confirmed. The score album, Grand Theft Auto VI: Original Score, comes out on 11 December 2026.'],
     ['Daft Punk confirmed they turned GTA 6 down.',false,'That story comes from one X post, and it never actually says no.'],
     ['You can listen to the radio on foot.',true,'Rockstar says radio plays through headphones on Jason\'s or Lucia\'s phone.'],
     ['GTA 6 Online is confirmed for launch day.',false,'Rockstar hasn\'t said. Still a rumor.']
