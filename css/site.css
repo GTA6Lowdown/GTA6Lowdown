@@ -379,7 +379,7 @@ footer .soc a{color:var(--orange-b);text-decoration:none;font-family:var(--displ
 
 /* fun stuff side column (v03) */
 .funrail{position:fixed;right:0;top:76px;bottom:0;z-index:40;display:flex;align-items:flex-start;pointer-events:none}
-.railtab{pointer-events:auto;writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--display);letter-spacing:.08em;font-size:17px;color:var(--brown);background:var(--orange);border:1px solid rgba(255,255,255,.5);border-radius:0 14px 14px 0;padding:16px 10px;margin-top:120px;cursor:pointer;box-shadow:0 8px 20px rgba(62,33,19,.25)}
+.railtab{pointer-events:auto;writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--display);letter-spacing:.08em;font-size:17px;color:var(--brown);background:linear-gradient(160deg,#fffaf0,#f3e6cc);border:1.5px solid rgba(255,255,255,.9);border-right:4px solid var(--orange);border-radius:0 14px 14px 0;padding:16px 10px;margin-top:120px;cursor:pointer;box-shadow:0 8px 20px rgba(62,33,19,.25)}
 .railpanel{pointer-events:auto;width:300px;height:100%;overflow-y:auto;padding:18px 16px 30px;background:linear-gradient(160deg,rgba(255,250,240,.82),rgba(243,230,204,.72));border-left:1px solid rgba(255,255,255,.7);box-shadow:-10px 0 30px rgba(62,33,19,.15);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);display:none}
 .funrail.open .railpanel{display:block}
 .railpanel h2{font-size:30px;margin:0 0 12px}

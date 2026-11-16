@@ -1,0 +1,111 @@
+/* GTA 6 Lowdown: extras shared by every page (dark mode, video players, floating phone). 16 Nov 2026 */
+
+/* ---------- dark mode (lamp switch) ---------- */
+html[data-theme="dark"]{--ground:#1d110a;--text:#f6e7cc;--muted:#d9c09f;--panel:#2a180e;
+  --glass:linear-gradient(135deg,rgba(255,250,240,.93),rgba(243,230,204,.86))}
+html[data-theme="dark"] body{background:var(--ground);color:var(--text)}
+html[data-theme="dark"] body::before{opacity:.55}
+html[data-theme="dark"] section[style*="--panel"]{background:linear-gradient(180deg,#2a180e,#22140c)!important}
+html[data-theme="dark"] .hero{background:radial-gradient(700px 420px at 78% 40%,rgba(255,255,255,.08),transparent 70%),#1d110a}
+html[data-theme="dark"] .hero h1 .o{color:#fbe9cc}
+html[data-theme="dark"] .hero p.tag,html[data-theme="dark"] .wanted-hint{color:#fbe9cc}
+html[data-theme="dark"] .kicker{color:#ef9706}
+html[data-theme="dark"] .lede,html[data-theme="dark"] .credit,html[data-theme="dark"] .small{color:var(--muted)}
+html[data-theme="dark"] h2 .w{color:#fbe9cc}
+html[data-theme="dark"] .filters button{color:#3e2113}
+html[data-theme="dark"] section.band-or{background:#b86a03}
+html[data-theme="dark"] .mapnotes,html[data-theme="dark"] .mapnotes a{color:var(--text)}
+html[data-theme="dark"] .note{color:#3e2113}
+html[data-theme="dark"] .article,html[data-theme="dark"] .article p,html[data-theme="dark"] .article li{color:var(--text)}
+html[data-theme="dark"] .article h1,html[data-theme="dark"] .article h2,html[data-theme="dark"] .article h3{color:#fbe9cc}
+html[data-theme="dark"] .article a{color:#f2b04a}
+html[data-theme="dark"] .article .quick,html[data-theme="dark"] .article .toc,html[data-theme="dark"] .article .callout,
+html[data-theme="dark"] .article .tablewrap,html[data-theme="dark"] .article .related a{color:#3e2113}
+html[data-theme="dark"] .article .quick *,html[data-theme="dark"] .article .toc *,html[data-theme="dark"] .article .callout p,
+html[data-theme="dark"] .article .tablewrap *,html[data-theme="dark"] .article .related *{color:#3e2113}
+
+/* ---------- video players that play on the page ---------- */
+.vrow{margin-top:34px}
+.vrow h3{font-size:28px;margin-bottom:14px}
+.vrow .vgrid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.yt{position:relative;display:block;width:100%;aspect-ratio:16/9;border:0;padding:0;border-radius:16px;overflow:hidden;cursor:pointer;
+  background:#3e2113;box-shadow:0 14px 34px rgba(62,33,19,.25),inset 0 1px 0 rgba(255,255,255,.3)}
+.yt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.yt .ytplay{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;
+  background:rgba(226,130,2,.92);box-shadow:0 10px 24px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.5);transition:transform .2s}
+.yt .ytplay::after{content:"";position:absolute;left:31px;top:24px;border-left:22px solid #3e2113;border-top:14px solid transparent;border-bottom:14px solid transparent}
+.yt:hover .ytplay,.yt:focus-visible .ytplay{transform:scale(1.1)}
+.yt .yttitle{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;text-align:left;font:400 19px/1.15 "Anton",Impact,sans-serif;letter-spacing:.01em;color:#fefefb;
+  background:linear-gradient(180deg,transparent,rgba(20,10,4,.85))}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.ytwrap{margin:26px 0}
+.ytwrap .ytcap{font-size:14px;color:#6b4a32;margin-top:8px}
+
+/* ---------- floating phone button ---------- */
+.phonefab{position:fixed;left:18px;top:62vh;z-index:70;width:64px;height:64px;border-radius:50%;border:1.5px solid rgba(255,255,255,.85);
+  background:linear-gradient(145deg,rgba(255,250,240,.92),rgba(243,230,204,.82));box-shadow:0 12px 30px rgba(62,33,19,.32),inset 0 1px 0 #fff;
+  -webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);cursor:grab;touch-action:none;display:flex;align-items:center;justify-content:center;padding:0}
+.phonefab.drag{cursor:grabbing;transform:scale(1.08)}
+.phonefab svg{width:30px;height:30px;pointer-events:none}
+.phonefab .dot{position:absolute;right:6px;top:6px;width:12px;height:12px;border-radius:50%;background:#e28202;border:2px solid #fbf4e6}
+@media (prefers-reduced-motion:no-preference){.phonefab{animation:fabbob 4s ease-in-out infinite}.phonefab.drag{animation:none}}
+@keyframes fabbob{0%,100%{translate:0 0}50%{translate:0 -5px}}
+
+/* ---------- the phone ---------- */
+.lphone{position:fixed;left:96px;bottom:14px;z-index:95}
+.lphone[hidden]{display:none}
+@media (max-width:640px){.lphone{left:50%;bottom:10px;transform:translateX(-50%)}}
+.phonefab.on{background:linear-gradient(145deg,#8fe36a,#3db52a);border-color:#d8f5cc}
+/* green shell, black face, glossy green wallpaper, icon grid, soft-key bar (inspired by Franklin's phone; own design) */
+.lp-frame{position:relative;width:min(340px,92vw);height:min(690px,86vh);border-radius:54px;padding:10px;
+  background:linear-gradient(145deg,#8fe36a 0%,#3db52a 30%,#25901c 70%,#58c63e 100%);
+  box-shadow:0 40px 90px rgba(0,0,0,.55),inset 0 2px 2px rgba(255,255,255,.6),inset 0 -3px 4px rgba(0,60,0,.45)}
+.lp-frame::before{content:"";position:absolute;right:-5px;top:150px;width:6px;height:70px;border-radius:0 4px 4px 0;background:#2a8a20;box-shadow:0 100px 0 #2a8a20}
+.lp-face{position:relative;height:100%;border-radius:48px;background:linear-gradient(180deg,#1b1d1f,#0b0c0d);padding:34px 12px 14px;display:flex;flex-direction:column;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+.lp-brand{position:absolute;top:10px;left:0;right:0;text-align:center;font:italic 700 13px "Archivo",sans-serif;letter-spacing:.04em;color:#e8f4e4}
+.lp-brand span{color:#7cdc5a}
+.lp-screen{position:relative;flex:1;border-radius:10px;overflow:hidden;background:#000;display:flex;flex-direction:column;border:1px solid #2c2f31}
+.lp-status{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:6px 10px 2px;color:#fff;font:700 13px "Archivo",sans-serif;background:#000}
+.lp-status .bat{display:inline-block;width:20px;height:9px;border:1.5px solid #fff;border-radius:2px;position:relative}
+.lp-status .bat::after{content:"";position:absolute;inset:1px 5px 1px 1px;background:#7cdc5a}
+.lp-status .day{font-size:12px;font-weight:600;display:block;margin-top:2px}
+.lp-status .clock{font:400 24px "Anton",Impact,sans-serif;letter-spacing:.02em}
+.lp-status .sig{justify-self:end;display:flex;align-items:flex-end;gap:2px;height:12px}
+.lp-status .sig i{display:block;width:3px;background:#fff;border-radius:1px}
+.lp-x{position:absolute;right:-12px;top:-12px;z-index:3;width:34px;height:34px;border-radius:50%;border:2px solid #d8f5cc;background:#1b1d1f;color:#fff;font:700 15px "Archivo",sans-serif;cursor:pointer;box-shadow:0 6px 14px rgba(0,0,0,.4)}
+.lp-x:hover,.lp-x:focus-visible{background:#3db52a}
+.lp-title{position:relative;text-align:center;color:#fff;font:600 17px "Archivo",sans-serif;padding:4px 0 7px;border-bottom:1px solid #444;background:#000;min-height:34px}
+.lp-back{position:absolute;left:8px;top:2px;background:#3db52a;color:#06240a;border:0;border-radius:999px;font:800 13px "Archivo",sans-serif;padding:5px 11px;cursor:pointer;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 0 0 2px rgba(124,220,90,.35)}
+.lp-back[hidden]{display:none}
+.lp-back:hover,.lp-back:focus-visible{background:#7cdc5a}
+@media (prefers-reduced-motion:no-preference){.lp-back{animation:backpulse 2.4s ease-in-out 3}}
+@keyframes backpulse{0%,100%{box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 0 0 2px rgba(124,220,90,.35)}50%{box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 0 0 7px rgba(124,220,90,.15)}}
+.lp-name{display:inline-block;padding-left:64px}
+.lp-back[hidden]+.lp-name{padding-left:0}
+.lp-body{position:relative;flex:1;overflow:hidden;
+  background:radial-gradient(circle at 50% 40%,rgba(124,220,90,.35),transparent 60%),
+    radial-gradient(circle,rgba(0,0,0,.35) 1.4px,transparent 1.6px) 0 0/9px 9px,
+    linear-gradient(160deg,#0f5d0c,#0a3d08 55%,#041f03)}
+.lp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 10px;padding:22px 16px}
+.lp-app{display:flex;flex-direction:column;align-items:center;gap:6px;background:none;border:0;cursor:pointer;padding:0;color:#e9f6e4;font:600 11px "Archivo",sans-serif;letter-spacing:.02em;text-decoration:none}
+.lp-app .ic{width:62px;height:62px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 55%),var(--c,#5a5f63);
+  box-shadow:0 4px 8px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.45),inset 0 -2px 0 rgba(0,0,0,.25)}
+.lp-app .ic svg{width:34px;height:34px}
+.lp-app:hover .ic,.lp-app:focus-visible .ic,.lp-app.sel .ic{outline:3px solid #7cdc5a;outline-offset:2px}
+.lp-feed{position:absolute;inset:0;overflow-y:auto;scroll-snap-type:y mandatory;overscroll-behavior:contain;scrollbar-width:none;background:#000}
+.lp-feed[hidden]{display:none}
+.lp-feed::-webkit-scrollbar{display:none}
+.lp-slide{position:relative;height:100%;scroll-snap-align:start;scroll-snap-stop:always;background:#000;display:flex;align-items:center;justify-content:center}
+/* crop Instagram's own header and footer so only the clip shows */
+.lp-media{position:relative;height:100%;aspect-ratio:9/16;max-width:100%;overflow:hidden;background:#000}
+.lp-media iframe{position:absolute;left:0;top:-54px;width:100%;height:calc(100% + 400px);border:0;background:#000}
+/* sized by extras.js so the 9:16 clip fills the screen (Instagram shows it inside a 4:5 box with a 54px header) */
+.lp-select{height:30px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#5c6063,#3a3d40);border-top:1px solid #777;color:#7cdc5a;font:700 13px "Archivo",sans-serif;letter-spacing:.03em}
+.lp-keys{display:grid;grid-template-columns:repeat(4,1fr);align-items:center;height:46px;margin-top:6px}
+.lp-keys button,.lp-keys a{background:none;border:0;cursor:pointer;height:100%;display:flex;align-items:center;justify-content:center}
+.lp-keys svg{width:22px;height:22px}
+.lp-keys button:hover svg,.lp-keys button:focus-visible svg,.lp-keys a:hover svg,.lp-keys a:focus-visible svg{filter:drop-shadow(0 0 4px #7cdc5a)}
+.lp-select{font-size:12px!important;color:#cfeec3!important;font-weight:600!important}
